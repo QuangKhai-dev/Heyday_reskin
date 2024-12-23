@@ -1,8 +1,11 @@
 @mixin section-title {
   font-family: 'Cinzel', serif;
   font-size: 4rem;
-  line-height: 1.125rem;
+  line-height: 1.125;
   font-weight: 400;
+  background: linear-gradient(90deg, #feffbc 0%, #ffc671 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @mixin display-tile {
@@ -15,14 +18,14 @@
 @mixin common-title {
   font-family: 'Cinzel', serif;
   font-size: 2rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
   font-weight: 400;
 }
 
 @mixin card-title {
   font-family: 'Cinzel', serif;
   font-size: 1.25rem;
-  line-height: 1.8rem;
+  line-height: 1.8;
   font-weight: 400;
 }
 
@@ -48,7 +51,15 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.25rem;
+  line-height: 1.25;
+}
+
+@mixin nav {
+  font-family: 'Roboto', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.13rem;
 }
 
 @mixin display-button {
@@ -60,5 +71,5 @@
 @mixin common-button {
   font-family: 'Cinzel', serif;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }

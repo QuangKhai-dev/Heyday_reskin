@@ -30,7 +30,8 @@ export default function Page() {
         </div>
         <Gameplay />
         <News_Updates />
-        <GameXStudio /> */}
+        */}
+        <GameXStudio />
         <Footer />
       </div>
     </>
