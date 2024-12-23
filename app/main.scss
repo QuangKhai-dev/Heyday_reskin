@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// ================================ Text ================================
+
+@mixin section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@mixin display-tile {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  line-height: calc(56 / 48);
+  font-weight: 400;
+}
+
+@mixin common-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+@mixin card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+
+@mixin description {
+  font-size: 0.75rem;
+  line-height: 2;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+  &:hover {
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+  }
+}
+
+@mixin date-caption {
+  font-family: 'Cinzel', serif;
+  font-size: 0.625rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@mixin menu {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+@mixin display-button {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  line-height: calc(32 / 24);
+  font-weight: 700;
+}
+@mixin common-button {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  line-height: calc(40 / 24);
+  font-weight: 400;
+  background-image: url('/2312/main-bg.png');
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+.menu {
+  @include menu;
+}
+
+// ================================  HEADER ================================
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8.75rem;
+    height: 118px;
+    align-items: center;
+    nav {
+      display: flex;
+      gap: 2.75rem;
+      .menu {
+        text-transform: uppercase;
+        background: linear-gradient(
+          90deg,
+          #ffffff 0%,
+          #f5f0d2 32%,
+          #e9dbbd 71%,
+          #ffffff 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        .icon-left {
+          transform: rotateY(180deg);
+          margin-right: -1rem;
+        }
+        .icon-right {
+          margin-left: -1rem;
+        }
+        .text {
+          position: relative;
+          &::before {
+            content: '';
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background-image: url('/2312/icons/menu-bot-line.svg');
+            width: 1.875rem;
+            aspect-ratio: 1/1;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
