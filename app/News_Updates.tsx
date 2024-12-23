@@ -8,7 +8,7 @@ import { contents } from './news-update/[newsId]/contentsData'
 export default function News_Updates() {
   return (
     <section id='community' className='scroll-mt-36 py-[180px]'>
-      <div className='container-1420 z-10' id='communityTitle'>
+      <div className='container-1680 z-10' id='communityTitle'>
         <div className='h-[520px]'>
           <h2 className='titleFont mb-6'>news & updates</h2>
           <Image

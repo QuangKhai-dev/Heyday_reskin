@@ -39,6 +39,7 @@
   line-height: 2;
   transition: all 0.3s ease-in-out;
   font-weight: 400;
+
   &:hover {
     font-size: 1.25rem;
     line-height: 1.6rem;
@@ -65,6 +66,7 @@
   line-height: calc(32 / 24);
   font-weight: 700;
 }
+
 @mixin common-button {
   font-family: 'Cinzel', serif;
   font-size: 1rem;
@@ -79,6 +81,7 @@ body {
   background-image: url(./../public/2312/main-bg.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 // @tailwind base;

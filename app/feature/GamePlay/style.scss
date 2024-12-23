@@ -1,0 +1,34 @@
+@import './../../mixin.scss';
+
+#gameplay {
+  h2 {
+    position: relative;
+    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include section-title;
+    margin-bottom: 120px;
+
+    &::after {
+      position: absolute;
+      background-image: url('./../../../public/2312/line_header.png');
+      width: 324px;
+      display: block;
+      height: 36px;
+      content: "";
+      bottom: -50px;
+    }
+  }
+
+  .gameplay-item {
+    border: 1px solid #DFAD69;
+    padding: 25px 30px 25px 30px;
+
+    .animate-title {
+      @include common-title;
+      background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

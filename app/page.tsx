@@ -1,38 +1,41 @@
-import AuctionHouse from './AuctionHouse'
 import Banner from './Banner'
 import Footer from './Footer'
-import GameFiM from './GameFiM'
+import GameFiM from './feature/GameFi/GameFiM'
 import GameXStudio from './GameXStudio'
-import Gameplay from './Gameplay'
+import Gameplay from './feature/GamePlay/Gameplay'
 import Header from './Header'
 import Home from './Home'
-import MysticalStone from './MysticalStone'
+import MysticalStone from './feature/MysticalStone/MysticalStone'
 import News_Updates from './News_Updates'
 import { IconDefs } from './components/icons/Icons'
 import './index.scss'
+import AuctionHouse from './feature/AuctionHouse/AuctionHouse'
 
 export default function Page() {
   return (
     <>
       <IconDefs />
-      <Header />
-      <div
+      {/* <Header /> */}
+      <GameFiM />
+      <MysticalStone />
+      <AuctionHouse />
+      <Gameplay />
+      {/* <News_Updates /> */}
+
+      {/* <div
         id='page'
         className='relative w-full flex-1 bg-cover bg-top bg-no-repeat'
       >
-        {/* Banner */}
         <Banner />
-        {/* <Home />
-        <GameFiM />
+
+        <Home />
+        
         <div>
-          <MysticalStone />
           <AuctionHouse />
         </div>
-        <Gameplay />
-        <News_Updates />
-        <GameXStudio /> */}
+        <GameXStudio />
         <Footer />
-      </div>
+      </div> */}
     </>
   )
 }

@@ -1,0 +1,55 @@
+@import './../../mixin.scss';
+
+#auctionHouse {
+  h2 {
+    position: relative;
+    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include section-title;
+    margin-bottom: 120px;
+
+    &::after {
+      position: absolute;
+      background-image: url('./../../../public/2312/line_header.png');
+      width: 324px;
+      display: block;
+      height: 36px;
+      content: "";
+      bottom: -50px;
+    }
+  }
+
+  p {
+    flex: 1;
+    color: white;
+    padding-right: 25px;
+  }
+
+  .highlight-wrapper {
+    width: 808px;
+    height: 355px;
+    padding-left: 95px;
+    padding-top: 70px;
+
+    ul {
+
+      li {
+        position: relative;
+        color: white;
+
+        &::before {
+          content: "";
+          background-image: url("./../../../public/2312/dot_image.png");
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          top: 50%;
+          left: -40px;
+          position: absolute;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

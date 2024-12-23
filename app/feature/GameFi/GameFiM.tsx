@@ -2,8 +2,9 @@
 import { arrow_line } from '@/public/images'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
-import { gamefiMe } from './data'
+import { gamefiMe } from '../../data'
 import gameFi1 from '@/app/components/icons/gameFi/gameFi1.png'
+import './style.scss'
 
 interface StateType {
   id: number | string
@@ -29,34 +30,22 @@ export default function GameFiM() {
 
   return (
     <section id='gameFiM' className='mt-11 scroll-mt-36'>
-      <div className='container-1420 relative z-10 pt-28'>
-        <div className='grid grid-cols-12'>
-          <div className='col-span-5'>
+      <div className='container-1680 relative z-10 pt-28'>
+        <div className='relative min-h-[800px]'>
+          <div className='relative z-10 w-1/2'>
             <h2>gamefi mechanism</h2>
-            <Image
-              src={arrow_line.src}
-              alt=''
-              width={220}
-              height={4}
-              className='mt-2'
-            />
             <h3 className='titleFont mt-4 font-light text-white lg:mt-5'>
               {text.name}
             </h3>
             <p className='mt-4 font-light text-white lg:mt-5'>{text.desc}</p>
           </div>
-
-          <div className='col-span-7'>
-            {
-              <Image
-                src={text.img.src}
-                alt=''
-                width={400}
-                height={400}
-                className='h-[200px] xl:h-[460px] xl:w-[900px]'
-              />
-            }
-          </div>
+          <Image
+            className='absolute right-0 top-1/2 -translate-y-1/2'
+            src={text.img.src}
+            alt=''
+            width={1420}
+            height={800}
+          />
         </div>
 
         <div className='flex w-full justify-between'>

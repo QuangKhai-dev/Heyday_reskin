@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './mixin';
+@import './mixin.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 // ================================ Text ================================
@@ -17,6 +17,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #000;
+  padding: 100px;
 }
 
 .menu {
@@ -36,40 +37,46 @@ body {
   top: 0;
   left: 0;
   z-index: 999;
+
   .header-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 0 8.75rem;
     height: 118px;
     align-items: center;
+
     nav {
       display: flex;
       gap: 2.75rem;
+
       .menu {
         text-transform: uppercase;
-        background: linear-gradient(
-          90deg,
-          #ffffff 0%,
-          #f5f0d2 32%,
-          #e9dbbd 71%,
-          #ffffff 100%
-        );
+        background: linear-gradient(90deg,
+            #ffffff 0%,
+            #f5f0d2 32%,
+            #e9dbbd 71%,
+            #ffffff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: flex;
         align-items: center;
+
         .icon-left {
           transform: rotateY(180deg);
           margin-right: -1rem;
         }
+
         .icon-right {
           margin-left: -1rem;
         }
+
         .text {
           position: relative;
+
           &::before {
             content: '';
           }
+
           &::after {
             content: '';
             position: absolute;
@@ -86,4 +93,5 @@ body {
     }
   }
 }
+
 // ================================  HEADER ================================
