@@ -8,6 +8,7 @@ import AuctionHouse from './feature/AuctionHouse/AuctionHouse'
 import Banner from './Banner'
 import Header from './feature/Header/Header'
 import Footer from './feature/Footer/Footer'
+import NewsUpdate from './feature/NewsUpdate/NewsUpdate'
 
 export default function Page() {
   return (
@@ -20,22 +21,7 @@ export default function Page() {
       <MysticalStone />
       <AuctionHouse />
       <Gameplay />
-      {/* <News_Updates /> */}
-
-      {/* <div
-        id='page'
-        className='relative w-full flex-1 bg-cover bg-top bg-no-repeat'
-      >
-      
-
-        <Home />
-        
-        <div>
-          <AuctionHouse />
-        </div>
-        <Gameplay />
-        <News_Updates />
-        */}
+      <NewsUpdate />
       <GameXStudio />
       <Footer />
     </>

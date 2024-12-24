@@ -1,5 +1,4 @@
 'use client'
-import { arrow_line } from '@/public/images'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import { gamefiMe } from '../../data'
