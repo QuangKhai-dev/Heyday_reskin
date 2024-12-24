@@ -9,7 +9,7 @@ export const Frame = () => {
       fill='none'
     >
       <g filter='url(#filter0_b_1796_3416)'>
-        <g clip-path='url(#clip0_1796_3416)'>
+        <g clipPath='url(#clip0_1796_3416)'>
           <rect
             y='0.925781'
             width='48'
@@ -19,7 +19,7 @@ export const Frame = () => {
           <path
             d='M4.4502 48.8555V233.994'
             stroke='#DFAD69'
-            stroke-width='1.2'
+            strokeWidth='1.2'
           />
           <rect
             width='48'
@@ -27,8 +27,8 @@ export const Frame = () => {
             transform='matrix(1 0 0 -1 0 281.926)'
             fill='url(#pattern1_1796_3416)'
           />
-          <path d='M47 5.42578H484' stroke='#DFAD69' stroke-width='1.2' />
-          <path d='M47 277.426H484' stroke='#DFAD69' stroke-width='1.2' />
+          <path d='M47 5.42578H484' stroke='#DFAD69' strokeWidth='1.2' />
+          <path d='M47 277.426H484' stroke='#DFAD69' strokeWidth='1.2' />
           <rect
             width='48'
             height='47.9305'
@@ -38,7 +38,7 @@ export const Frame = () => {
           <path
             d='M526.55 48.8555V233.994'
             stroke='#DFAD69'
-            stroke-width='1.2'
+            strokeWidth='1.2'
           />
           <rect
             x='531'
@@ -58,9 +58,9 @@ export const Frame = () => {
           width='571'
           height='321'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feGaussianBlur in='BackgroundImageFix' stdDeviation='10' />
           <feComposite
             in2='SourceAlpha'

@@ -1,9 +1,44 @@
 .section-banner {
   width: 100%;
+  position: relative;
+
   .container-1920 {
+    background-size: cover;
     height: auto;
     aspect-ratio: 16/9;
-    background-size: cover;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      background-image: url('/2312/bg-banner-1.png');
+      background-size: cover;
+      -webkit-mask-image: url('/2312/mask.png');
+      mask-image: url('/2312/mask.png');
+      mask-size: cover;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      background: url('/2312/animation-bg.gif');
+      background-size: cover;
+      -webkit-mask-image: url('/2312/mask.png');
+      mask-image: url('/2312/mask.png');
+      mask-size: cover;
+    }
     .content-wrapper {
       height: 100%;
       display: flex;
@@ -13,10 +48,13 @@
       padding-bottom: 5rem;
     }
     .logo-text {
-      margin-bottom: 2.625rem;
+      width: 36vw;
+      max-width: 690px;
+      object-fit: contain;
+      margin-bottom: 5rem;
     }
     h1 {
-      color: #483705;
+      color: black;
       position: relative;
       width: 100%;
       max-width: 1450px;
@@ -33,7 +71,7 @@
       &::before {
         content: '';
         position: absolute;
-        top: 0;
+        top: -5px;
         left: 50%;
         transform: translate(-50%, 0%);
         width: 100%;
@@ -47,6 +85,7 @@
   }
   .list-apps {
     display: flex;
+    gap: 0.5rem;
 
     .app-item {
       padding: 0.625rem 1.25rem;
@@ -54,20 +93,19 @@
       justify-content: center;
       align-items: center;
       gap: 0.625rem;
-
       .icon {
         position: relative;
         z-index: 20;
         &::before {
-          z-index: -1;
           content: '';
+          width: 100%;
+          height: 100%;
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          background-image: url('/2312/icons/blur-icon.png');
+          background: #fff;
+          z-index: -1;
+          filter: blur(25px);
         }
         svg {
           width: 3.5rem;
@@ -84,5 +122,8 @@
         font-weight: 700;
       }
     }
+  }
+  .div-translateY {
+    transform: translateY(-5rem);
   }
 }
