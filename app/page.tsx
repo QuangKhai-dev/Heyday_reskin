@@ -6,12 +6,16 @@ import MysticalStone from './feature/MysticalStone/MysticalStone'
 import { IconDefs } from './components/icons/Icons'
 import './index.scss'
 import AuctionHouse from './feature/AuctionHouse/AuctionHouse'
+import Banner from './Banner'
+import Header from './Header'
 
 export default function Page() {
   return (
     <>
+      <Header />
+
+      <Banner />
       <IconDefs />
-      {/* <Header /> */}
       <GameFiM />
       <MysticalStone />
       <AuctionHouse />
@@ -22,7 +26,7 @@ export default function Page() {
         id='page'
         className='relative w-full flex-1 bg-cover bg-top bg-no-repeat'
       >
-        <Banner />
+      
 
         <Home />
         
