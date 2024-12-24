@@ -1,6 +1,6 @@
 import React from 'react'
 import { privacyP } from '@/public/images/supports'
-import Header from '@/app/Header'
+import Header from '@/app/feature/Header/Header'
 import { privacyPData } from '../data_sp'
 import cn from '@/app/utils/cn'
 import { NewsLine } from '@/app/components/structures'

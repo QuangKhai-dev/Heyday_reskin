@@ -1,4 +1,4 @@
-import Header from '@/app/Header'
+import Header from '@/app/feature/Header/Header'
 import { texture } from '@/public/images/newsUpdate'
 import GameXStudio from '@/app/GameXStudio'
 import Footer from '@/app/Footer'

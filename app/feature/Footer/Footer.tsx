@@ -1,34 +1,16 @@
 'use client'
 import { MediaList } from '@/app/components/structures'
-import { Bg_footer, dot, line, logo } from '@/public/images'
+import { dot, logo } from '@/public/images'
 import Image from 'next/image'
 import Link from 'next/link'
-import { footer_nav } from './data'
+import { footer_nav } from './../../data'
+import './style.scss'
 
 export default function Footer() {
   return (
-    <footer className='w-full scroll-mt-36 pb-24' id='footer'>
-      <div className='relative w-full'>
-        <Image
-          src={line.src}
-          alt=''
-          width={1420}
-          height={5}
-          className='m-auto mb-6 text-center'
-        />
-
-        <div className='absolute left-8 top-[-224px] z-[-1]'>
-          <Image
-            src={Bg_footer.src}
-            alt=''
-            width={1440}
-            height={400}
-            className=''
-          />
-        </div>
-      </div>
-
-      <div className='container-1420'>
+    <footer className='relative w-full scroll-mt-36 pb-24 pt-6' id='footer'>
+      <div className='line-footer'></div>
+      <div className='container-1920'>
         <div className='footer-content flex justify-between'>
           {/* {/ ICON + MEDIA LIST /} */}
           <div className='footer-title'>
@@ -43,15 +25,15 @@ export default function Footer() {
             {footer_nav.map((content, index) => {
               return (
                 <div key={index} className='footer-text-item text-nowrap'>
-                  <h6 className='bg-whiteToPeach98deg bg-clip-text font-beaufortLoL text-xl uppercase leading-5 text-transparent'>
+                  <h3 className='bg-whiteToPeach98deg bg-clip-text font-beaufortLoL text-xl uppercase leading-5 text-transparent'>
                     {content.name}
-                  </h6>
+                  </h3>
                   <ul className='mt-5'>
                     {content.list.map((item, index) => {
                       return (
                         <li key={index} className='flex items-center gap-2.5'>
-                          <Image src={dot.src} width={20} height={20} alt='' />
-                          <span className='cursor-pointer text-[10px] capitalize leading-loose text-beige-50 md:text-sm xl:text-xl'>
+                          <Image src={dot.src} width={32} height={32} alt='' />
+                          <span className='cursor-pointer capitalize leading-loose text-beige-50'>
                             {item.path !== '' ? (
                               <Link href={`${item.path}`}>{item.name}</Link>
                             ) : (

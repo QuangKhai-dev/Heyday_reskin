@@ -1,0 +1,19 @@
+@import './../../mixin.scss';
+
+#footer {
+  .line-footer {
+    position: absolute;
+    width: 1640px;
+    height: 2px;
+    background-color: #DFAD69;
+    border-radius: 8px;
+    top: 0;
+  }
+
+  .footer-text {
+    h3 {
+
+      @include common-title;
+    }
+  }
+}

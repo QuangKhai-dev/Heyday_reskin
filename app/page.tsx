@@ -1,4 +1,3 @@
-import Footer from './Footer'
 import GameFiM from './feature/GameFi/GameFiM'
 import GameXStudio from './GameXStudio'
 import Gameplay from './feature/GamePlay/Gameplay'
@@ -6,12 +5,14 @@ import MysticalStone from './feature/MysticalStone/MysticalStone'
 import { IconDefs } from './components/icons/Icons'
 import './index.scss'
 import AuctionHouse from './feature/AuctionHouse/AuctionHouse'
+import Header from './feature/Header/Header'
+import Footer from './feature/Footer/Footer'
 
 export default function Page() {
   return (
     <>
       <IconDefs />
-      {/* <Header /> */}
+      <Header />
       <GameFiM />
       <MysticalStone />
       <AuctionHouse />

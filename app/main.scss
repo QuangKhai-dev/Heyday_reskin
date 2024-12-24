@@ -35,6 +35,12 @@ body {
   margin: 0 auto;
 }
 
+.container-1920 {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 // ================================  PADDING ================================
 .pt-160 {
   padding-top: 10rem;
@@ -44,80 +50,6 @@ body {
   padding-bottom: 4.25rem;
 }
 
-// ================================  HEADER ================================
-#header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
 
-  .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 8.75rem;
-    height: 118px;
-    align-items: center;
-
-    nav {
-      display: flex;
-      gap: 2.75rem;
-
-      .menu {
-        text-transform: uppercase;
-        background: linear-gradient(90deg,
-            #ffffff 0%,
-            #f5f0d2 32%,
-            #e9dbbd 71%,
-            #ffffff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        .text {
-          text-transform: uppercase;
-          background: linear-gradient(90deg,
-              #ffffff 0%,
-              #f5f0d2 32%,
-              #e9dbbd 71%,
-              #ffffff 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        display: flex;
-        align-items: center;
-
-        .icon-left {
-          transform: rotateY(180deg);
-          margin-right: -1rem;
-        }
-
-        .icon-right {
-          margin-left: -1rem;
-        }
-
-        .text {
-          position: relative;
-
-          &::before {
-            content: '';
-          }
-
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 50%);
-            background-image: url('/2312/icons/menu-bot-line.svg');
-            width: 1.875rem;
-            aspect-ratio: 1/1;
-            height: auto;
-          }
-        }
-      }
-    }
-  }
-}
 
 // ================================  HEADER ================================

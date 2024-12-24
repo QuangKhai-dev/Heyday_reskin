@@ -1,0 +1,105 @@
+@import './../../mixin.scss';
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 0.5px solid #FFFFFF;
+  backdrop-filter: blur(5px);
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8.75rem;
+    height: 118px;
+    align-items: center;
+
+    nav {
+      display: flex;
+      gap: 2.75rem;
+      height: 100%;
+      align-items: flex-end;
+
+      .menu {
+        text-transform: uppercase;
+        background: linear-gradient(90deg,
+            #ffffff 0%,
+            #f5f0d2 32%,
+            #e9dbbd 71%,
+            #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        .text {
+          text-transform: uppercase;
+          background: linear-gradient(90deg,
+              #ffffff 0%,
+              #f5f0d2 32%,
+              #e9dbbd 71%,
+              #ffffff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        display: flex;
+        align-items: center;
+
+        .icon-left {
+          transform: rotateY(180deg);
+          margin-right: -1rem;
+        }
+
+        .icon-right {
+          margin-left: -1rem;
+        }
+
+        .text {
+          display: inline-block;
+          height: 61px;
+          line-height: 61px;
+          position: relative;
+
+          &::before {
+            content: '';
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            background-image: url('./../../../public/2312/dogHeader2.png');
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            border: 1px solid #FFF7C4;
+            z-index: 1;
+          }
+
+        }
+      }
+    }
+
+    .button-action-header {
+      width: 216px;
+      height: 102px;
+
+      span {
+        @include card-title;
+        font-weight: bold;
+      }
+    }
+  }
+
+
+}
