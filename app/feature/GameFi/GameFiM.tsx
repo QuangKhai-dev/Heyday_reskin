@@ -30,7 +30,7 @@ export default function GameFiM() {
 
   return (
     <section id='gameFiM' className='mt-11 scroll-mt-36'>
-      <div className='container-1680 relative z-10 pt-28'>
+      <div className='container-1640 relative z-10 pt-28'>
         <div className='relative min-h-[800px]'>
           <div className='relative z-10 w-1/2'>
             <h2>gamefi mechanism</h2>

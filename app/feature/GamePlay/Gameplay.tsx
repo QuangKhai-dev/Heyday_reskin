@@ -8,7 +8,7 @@ export default function Gameplay() {
       id='gameplay'
       className='relative flex scroll-mt-60 items-center pt-[140px] duration-300'
     >
-      <div className='container-1680'>
+      <div className='container-1640'>
         <div className='title'>
           <h2>Game play</h2>
         </div>

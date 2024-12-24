@@ -64,7 +64,7 @@ body {
       gap: 2.75rem;
 
       .menu {
-        <<<<<<< HEAD text-transform: uppercase;
+        text-transform: uppercase;
         background: linear-gradient(90deg,
             #ffffff 0%,
             #f5f0d2 32%,
@@ -73,7 +73,7 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        =======.text {
+        .text {
           text-transform: uppercase;
           background: linear-gradient(90deg,
               #ffffff 0%,
@@ -84,7 +84,7 @@ body {
           -webkit-text-fill-color: transparent;
         }
 
-        >>>>>>>48be7b79440e7ab80c55b1d73e5387bbe0613ad2 display: flex;
+        display: flex;
         align-items: center;
 
         .icon-left {

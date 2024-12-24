@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function MysticalStone() {
   return (
     <section id='mysticalStone'>
-      <div className='container-1680'>
+      <div className='container-1640'>
         <div className='title'>
           <h2>Mystical Stone</h2>
         </div>

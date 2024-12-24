@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function AuctionHouse() {
   return (
     <section id='auctionHouse'>
-      <div className='container-1680'>
+      <div className='container-1640'>
         <div className='title'>
           <h2>Auction House</h2>
         </div>
