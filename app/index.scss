@@ -4,5 +4,85 @@
     height: auto;
     aspect-ratio: 16/9;
     background-size: cover;
+    .content-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      padding-bottom: 5rem;
+    }
+    .logo-text {
+      margin-bottom: 2.625rem;
+    }
+    h1 {
+      color: #483705;
+      position: relative;
+      width: 100%;
+      max-width: 1450px;
+      aspect-ratio: calc(1451.71 / 182.37);
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      z-index: 5;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: url('/2312/light.png');
+        background-size: contain;
+        z-index: -1;
+      }
+    }
+  }
+  .list-apps {
+    display: flex;
+
+    .app-item {
+      padding: 0.625rem 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+
+      .icon {
+        position: relative;
+        z-index: 20;
+        &::before {
+          z-index: -1;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-image: url('/2312/icons/blur-icon.png');
+        }
+        svg {
+          width: 3.5rem;
+          height: auto;
+          aspect-ratio: 1/1;
+        }
+      }
+      .icon-name {
+        text-transform: uppercase;
+        font-family: 'Cinzel', serif;
+        font-size: 1rem;
+        line-height: 1.125;
+        line-height: 1.5rem;
+        font-weight: 700;
+      }
+    }
   }
 }
