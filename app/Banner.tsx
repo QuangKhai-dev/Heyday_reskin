@@ -60,9 +60,7 @@ const Banner = () => {
           />
           <div className='div-translateY'>
             {/* Title */}
-            <h1>
-              <span>RISE & CONQUER</span>
-            </h1>
+            <h1>{/* <span>RISE & CONQUER</span> */}</h1>
             {/* List app */}
             <div className='list-apps'>{handleRenderApp()}</div>
           </div>
