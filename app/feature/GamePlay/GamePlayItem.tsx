@@ -5,7 +5,7 @@ import AnimateHeight, { Height } from 'react-animate-height'
 
 interface IProps {
   title: string
-  content: string | undefined
+  content: string | string[]
 }
 
 const GamePlayItem = ({ title, content }: IProps) => {
@@ -45,11 +45,11 @@ const GamePlayItem = ({ title, content }: IProps) => {
         onClick={() => setHeight(height === 0 ? 'auto' : 0)}
       >
         <h3>{title}</h3>
-        <div>
+        <div className='angle-icon'>
           <Image
+            className={height !== 0 ? 'rotate-180' : 'rotate-0'}
+            fill
             alt='icon gameplay'
-            width={45}
-            height={45}
             src='/2312/icon_gameplay.png'
           />
         </div>
@@ -59,7 +59,19 @@ const GamePlayItem = ({ title, content }: IProps) => {
         duration={500}
         height={height} // see props documentation below
       >
-        <p className='pt-10 text-white'>{content}</p>
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((item, index) => {
+              return (
+                <li className='desc pt-10 text-white' key={index}>
+                  {item}
+                </li>
+              )
+            })}
+          </ul>
+        ) : (
+          <p className='desc pt-10 text-white'>{content}</p>
+        )}
       </AnimateHeight>
     </div>
   )

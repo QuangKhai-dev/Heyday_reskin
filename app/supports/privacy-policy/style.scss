@@ -1,0 +1,102 @@
+@media only screen and (min-width: 1920px) {
+  body {
+    max-width: 1920px;
+  }
+}
+
+body {
+  margin: 0 auto;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#privacy-conditions-page {
+  .title-privacy-policy {
+    margin: 100px 0;
+  }
+
+  .privacy-data-content {
+    margin-top: 40px;
+  }
+
+  ul {
+    list-style: square;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  #privacy-conditions-page {
+    .banner-privacy-conditions {
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #privacy-conditions-page {
+    h4 {
+      font-size: 30px;
+    }
+
+    li {
+      font-size: 20px;
+    }
+
+    .banner-privacy-conditions {
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #privacy-conditions-page {
+
+    h4,
+    li {
+      font-size: 0.625rem;
+      line-height: 1;
+    }
+
+    .title-privacy-policy {
+      margin: 15px 0;
+
+      .sub-title {
+        font-size: 0.625rem;
+        line-height: 1;
+      }
+
+      h3 {
+        font-size: 16px;
+        line-height: 1.2;
+      }
+    }
+
+    .line-mobile {
+      display: block;
+    }
+
+    .line-desktop {
+      display: none;
+    }
+
+    h4 {
+      @apply mt-3;
+    }
+
+    .privacy-data-content {
+      ul {
+        @apply mt-2;
+
+        li {
+          @apply ml-5;
+        }
+      }
+
+      .list-privacy-content-item {
+        @apply ml-0;
+      }
+    }
+  }
+}

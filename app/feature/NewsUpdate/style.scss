@@ -1,33 +1,415 @@
-@import './../../mixin.scss';
+@use './../../mixin';
 
 #community {
-  h2 {
-    position: relative;
-    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @include section-title;
-    margin-bottom: 120px;
-
-    &::after {
-      position: absolute;
-      background-image: url('./../../../public/2312/line_header.png');
-      width: 324px;
-      display: block;
-      height: 36px;
-      content: "";
-      bottom: -50px;
-    }
-  }
-
   h3 {
     background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @include display-tile;
+    @include mixin.display-tile;
+  }
+
+  h4 {
+    @include mixin.card-title;
+    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   p {
     color: white;
+  }
+
+  .animation-readmore-title {
+    display: inline-block;
+
+    position: relative;
+
+    .animation {
+      svg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.5s;
+      }
+
+      span {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: max-content;
+        transition: all 0.5s;
+      }
+    }
+
+    span {
+      @include mixin.card-title;
+      background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    &:hover {
+      .animation {
+        svg {
+          left: 77%;
+        }
+
+        span {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .game-fi-box {
+    background: black;
+    padding: 10px;
+
+    &:hover {
+      h4 {
+        background-image: unset;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        color: white;
+      }
+
+      .animation-readmore {
+        svg {
+          left: 27%;
+        }
+
+        span {
+          left: 8% !important;
+        }
+      }
+    }
+
+    .topLeft-icon {
+      top: 5px;
+      left: 4px;
+    }
+
+    .topRight-icon {
+      top: 5px;
+      right: 4px;
+    }
+
+    .bottomLeft-icon {
+      bottom: 5px;
+      left: 4px;
+    }
+
+    .bottomRight-icon {
+      bottom: 5px;
+      right: 4px;
+    }
+
+    .game-fi-box-wrapper {
+      border: 1px solid #dfad69;
+      min-height: 281px;
+
+      .content {
+        p {
+          font-size: 12px;
+          transition: all 0.5s;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    h6 {
+      @include mixin.card-title;
+      background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 10px;
+    }
+
+    .animation-readmore {
+      span {
+        bottom: 21.5%;
+        position: absolute;
+        @include mixin.card-title;
+        background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 16px;
+        transition: all 0.5s;
+        left: 16%;
+      }
+    }
+
+
+
+    &:hover {
+      .content {
+        p {
+
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .title-mobile {
+    display: none;
+  }
+
+  .main-news {
+    position: relative;
+
+    .main-news-item {
+      &:hover {
+        h3 {
+          background-image: unset;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: unset;
+          color: white;
+        }
+      }
+
+    }
+
+    .leftSide {
+      width: 60%;
+      max-width: 1009px;
+
+      .animation-readmore {
+        span {
+          background: var(--text-gardient,
+              linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%));
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 1.5rem;
+          font-family: 'Cinzel', serif;
+          font-weight: bold;
+        }
+      }
+
+      .main-news-item-footer,
+      .main-news-item-content {
+        max-width: 830px;
+      }
+    }
+
+    .rightSide {
+      position: absolute;
+      top: -20px;
+      right: -8%;
+      width: 60%;
+      height: auto;
+      aspect-ratio: 954.05/508.83;
+      z-index: -1;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .animation-readmore {
+    padding-left: calc(2.125rem + 0.625rem);
+    transition: all 0.5s ease-in-out;
+
+    * {
+      transition: all 0.5s ease-in-out;
+    }
+
+    svg {
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      left: 50px;
+      width: 2.125rem;
+      height: auto;
+      bottom: 25%;
+    }
+
+    &:hover {
+      padding-left: 0;
+      padding-right: calc(2.125rem + 0.625rem);
+
+
+    }
+  }
+
+  .swiper-update {
+    overflow: visible;
+
+    .swiper-wrapper {
+      padding-bottom: 100px;
+    }
+
+
+    .dot-active,
+    .swiperGamePlay .dot-active,
+    .swiper-newupdate .dot-active {
+      display: none;
+    }
+
+    .swiper-pagination-bullet-active .dot-active,
+    .swiperGamePlay .swiper-pagination-bullet-active .dot-active,
+    .swiper-newupdate .swiper-pagination-bullet-active .dot-active {
+      display: inline-block;
+    }
+
+    .swiper-pagination-bullet-active .dot-unActive,
+    .swiperGamePlay .swiper-pagination-bullet-active .dot-unActive,
+    .swiper-newupdate .swiper-pagination-bullet-active .dot-unActive {
+      display: none;
+    }
+
+    .dot-carousel-gamefim {
+      width: 13px !important;
+      height: 13px !important;
+      display: inline-block !important;
+      background-color: unset !important;
+      opacity: 1 !important;
+    }
+  }
+
+  .wrraper-slider {
+    position: relative;
+
+    .arrows-swiper {
+      position: absolute !important;
+      width: max-content;
+      right: 0;
+      bottom: -20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #community {
+    .game-fi-box {
+      .animation-readmore {
+        span {
+          left: 20%;
+        }
+      }
+
+      &:hover {
+        .animation-readmore {
+          span {
+            left: 12% !important;
+          }
+
+          svg {
+            left: 35%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 1024px) {
+  #community {
+    .arrows-swiper {
+      margin-top: -12% !important;
+    }
+  }
+}
+
+@media screen and (max-width : 820px) {
+  #community {
+    .arrows-swiper {
+      margin-top: -17% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #community {
+    .title-mobile {
+      display: block;
+    }
+
+    .main-news {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .leftSide {
+        width: 100%;
+
+        .lineskin {
+          display: none;
+        }
+      }
+
+      .rightSide {
+        width: 100%;
+        position: static;
+      }
+    }
+
+    .arrows-swiper {
+      margin-top: -19% !important;
+
+      img {
+        width: 40px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width : 768px) {
+  #community {
+    .title-mobile {
+      display: block;
+    }
+
+    .main-news {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .leftSide {
+        width: 100%;
+
+        .lineskin {
+          display: none;
+        }
+      }
+
+      .rightSide {
+        width: 100%;
+        position: static;
+      }
+    }
+
+    .arrows-swiper {
+      margin-top: -19% !important;
+      bottom: -10px !important;
+
+      img {
+        width: 35px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width : 576px) {
+  #community {
+
+
+    padding-top: 100px;
+
+    .view-bg {
+      transform: translateX(-40%);
+    }
+
+    .animation {
+      span {
+        font-size: 1rem;
+      }
+    }
   }
 }

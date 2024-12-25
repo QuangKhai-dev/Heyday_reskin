@@ -39,7 +39,13 @@ const ButtonDetailPage = ({
       }}
       className={`relative ${buttonClassname} `}
     >
-      <img className='h-full w-full' src={backgroundButton.src} alt='' />
+      <Image
+        width={327}
+        height={164}
+        className='h-full w-full'
+        src={backgroundButton.src}
+        alt=''
+      />
       <div className='absolute left-0 top-1/2 flex w-full -translate-y-1/2 justify-between px-8'>
         <Image
           src={newsId === '1' ? disableLS : enableLS}

@@ -4,12 +4,13 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import NewUpdatesBox from '@/app/components/frames/NewUpdatesBox'
 import { newUpdate } from '@/app/data'
-import arrowNext from '@/public/images/arrow_next.png'
+import arrowNext from '@/public/2312/arrowNextUpdate.png'
 import dotActiveCarousel from '@/public/images/dot_active_carousel.png'
 import dotUnactive from '@/public/images/dot_carousel.png'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import Image from 'next/image'
 
 const ReactSwiperNewUpdates = () => {
   const swiperRef = useRef<SwiperClass>()
@@ -17,16 +18,16 @@ const ReactSwiperNewUpdates = () => {
   return (
     <>
       <Swiper
-        slidesPerView={1.2}
+        slidesPerView={1}
         spaceBetween={8}
         onBeforeInit={swiper => {
           swiperRef.current = swiper
         }}
         loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false
+        // }}
         pagination={{
           clickable: true,
           // custom pagination
@@ -38,15 +39,27 @@ const ReactSwiperNewUpdates = () => {
           }
         }}
         modules={[Pagination, Navigation, Autoplay]}
-        className='mySwiper'
+        className='swiper-update'
         // responsive slide
         breakpoints={{
           768: {
-            slidesPerView: 1.2,
-            spaceBetween: 30
+            slidesPerView: 1.5,
+            spaceBetween: 40
+          },
+          1024: {
+            slidesPerView: 1.7,
+            spaceBetween: 40
           },
           1280: {
-            slidesPerView: 2.6,
+            slidesPerView: 2.2,
+            spaceBetween: 40
+          },
+          1440: {
+            slidesPerView: 2.5,
+            spaceBetween: 40
+          },
+          1640: {
+            slidesPerView: 3,
             spaceBetween: 40
           }
         }}
@@ -58,7 +71,6 @@ const ReactSwiperNewUpdates = () => {
                 date={data.date}
                 key={index}
                 id_story={data.id}
-                width={570}
                 title={data.title}
                 subtitle={data.subtitle}
                 Img={data.url}
@@ -69,14 +81,26 @@ const ReactSwiperNewUpdates = () => {
       </Swiper>
 
       {/* button click slide */}
-      <div className='arrows-swiper relative -bottom-10 mt-2 space-x-5 text-right'>
+      <div
+        className='arrows-swiper relative -bottom-10 mt-2 space-x-5 text-right'
+        style={{
+          marginTop: '-7%',
+          zIndex: 5
+        }}
+      >
         <button
           onClick={() => {
             swiperRef.current?.slidePrev()
           }}
           className='cursor-pointer'
         >
-          <img className='dot-unActive rotate-180' src={arrowNext.src} />
+          <Image
+            width={56}
+            height={79}
+            alt=''
+            className='dot-unActive rotate-180'
+            src={arrowNext.src}
+          />
         </button>
         <button
           onClick={() => {
@@ -84,7 +108,13 @@ const ReactSwiperNewUpdates = () => {
           }}
           className='cursor-pointer'
         >
-          <img className='dot-unActive' src={arrowNext.src} />
+          <Image
+            width={56}
+            height={79}
+            alt=''
+            className='dot-unActive'
+            src={arrowNext.src}
+          />
         </button>
       </div>
     </>

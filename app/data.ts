@@ -5,7 +5,7 @@ import { Item4 } from '@/app/components/icons/new-up/item-4'
 import gameFi1 from '@/app/components/icons/gameFi/gameFi1.png'
 import gameFi2 from '@/app/components/icons/gameFi/gameFi2.png'
 import gameFi3 from '@/app/components/icons/gameFi/gameFi3.png'
-import gameFi4 from '@/app/components/icons/gameFi/gameFi4.png'
+import gameFi4 from '@/public/2312/gameFi4.png'
 import gameFi5 from '@/app/components/icons/gameFi/gameFi5.png'
 import gameFi6 from '@/app/components/icons/gameFi/gameFi6.png'
 
@@ -170,10 +170,9 @@ const gamefiMe = {
 const newUpdate = [
   {
     id: 1,
-    title: 'Introducing Heyday: Rise of Empires',
+    title: 'Heyday: Rise of Empires – The Game’s Uniqueness',
     date: 'October 1, 2024',
-    subtitle:
-      'Been Boom Labs and Ebizworld, two powerhouses in their respective industries, have been working tirelessly since August 2024 to bring a revolutionary project to life. Combining blockchain technology with immersive strategy gameplay, the result is Heyday: Rise of Empires, a game that redefines the boundaries of entertainment and player engagement.',
+    subtitle: `Step into a world where strategy, power, and ancient mysteries collide. Heyday: Rise of Empires isn’t just another empire-building game; it’s an expansive, blockchain-integrated experience that blends deep tactical combat, dynamic factional politics, and the thrill of discovery. With unique features like the Mystical Stone System, the Path of Ascendancy, and full ownership of in-game assets through NFTs, Heyday sets itself apart from anything you’ve played before. Whether you're leading one of the powerful factions to dominance, unlocking rare relics, or trading valuable assets, every decision you make will shape the future of the fractured world of Covenant. Ready to carve your path and rise to the top? Here’s why Heyday: Rise of Empires is a game like no other.`,
     url: Item1
   },
   {
@@ -247,7 +246,7 @@ const footer_nav = [
     ]
   },
   {
-    name: 'available soon',
+    name: 'download now',
     list: [
       { name: 'android', path: '' },
       { name: 'IOS', path: '' },

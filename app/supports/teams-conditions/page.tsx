@@ -5,8 +5,9 @@ import { teamCData } from '../data_sp'
 import cn from '@/app/utils/cn'
 import { NewsLine } from '@/app/components/structures'
 import NewsLineReponsive from '@/app/components/structures/NewsLineReponsive'
-import Footer from '@/app/Footer'
 import { IconDefs } from '@/app/components/icons/Icons'
+import Footer from '@/app/feature/Footer/Footer'
+import './style.scss'
 
 export default function TeamsConditionsPage() {
   return (
@@ -22,7 +23,7 @@ export default function TeamsConditionsPage() {
               backgroundSize: '100% 100%'
             }}
           ></div>
-          <div className='container-1620'>
+          <div className='container-1640'>
             <div className='pb-10'>
               <div className='title-privacy-policy'>
                 <span className='sub-title font-gothic text-2xl capitalize leading-8 tracking-widest text-beige-50'>

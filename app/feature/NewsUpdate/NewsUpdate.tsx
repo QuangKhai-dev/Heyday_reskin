@@ -1,56 +1,53 @@
 'use client'
 import ReactSwiperNewUpdates from '@/app/components/carousel/ReactSwiperNewUpdates'
-import { IMG } from '@/public/images'
+import IMG from '@/public/2312/news-updated.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { contents } from './../../news-update/[newsId]/contentsData'
 import './style.scss'
+import Icons from '@/app/components/icons/Icons'
 export default function NewsUpdate() {
   return (
-    <section id='community' className='scroll-mt-36 py-[180px]'>
-      <div className='container-1640 z-10' id='communityTitle'>
-        <div className='min-h-[520px]'>
-          <h2 className='titleFont mb-6'>news & updates</h2>
-
-          <div className='left-item content_newupdate relative flex'>
-            {/* LEFT ITEM */}
-            <div className='relative z-10 grid grid-cols-5'>
-              <div className='col-span-3 lg:w-auto'>
-                <Link href={`news-update/${contents[0].id}`}>
-                  <h3 className='text titleFont mb-3'>{contents[0].title}</h3>
-                </Link>
-                <p className='line-clamp-3 pr-12 opacity-65'>
-                  {contents[0].subtitle}
-                </p>
-              </div>
-
-              <div className='flex w-[70%] justify-between'>
-                {/* <h6 className='mb-3 mt-6 text-[12px] tracking-widest text-beige-50'>
-                  {contents[0].date}
-                </h6> */}
-
-                {/* <div className='new-update-box w-32 cursor-pointer'>
-                  <div className='animation-readmore mt-5'>
+    <section id='community' className='pt-40'>
+      <div className='container-1640 z-10'>
+        {/* Main News */}
+        <h2 className='lineskin title-mobile'>news & updates</h2>
+        <div className='main-news mb-12'>
+          <div className='leftSide'>
+            <h2 className='lineskin'>news & updates</h2>
+            <div className='main-news-item'>
+              <Link href={`news-update/${contents[0].id}`}>
+                <h3 className='text titleFont mb-3'>{contents[0].title}</h3>
+              </Link>
+              <p className='main-news-item-content line-clamp-3 opacity-65'>
+                {contents[0].subtitle}
+              </p>
+              <div className='main-news-item-footer mt-2 flex justify-between'>
+                <p className='date'>{contents[0].date}</p>
+                <Link
+                  className='animation-readmore-title flex items-center'
+                  href={`news-update/${contents[0].id}`}
+                >
+                  <div className='animation'>
                     <Icons.svgReadMore />
-                    <span className='text-title-newUpdates font-bold'>
-                      Read more
-                    </span>
+                    <span>Read more</span>
                   </div>
-                </div> */}
+                  <div className='invisible flex items-center opacity-0'>
+                    <Icons.svgReadMore />
+                    <span>Read more</span>
+                  </div>
+                </Link>
               </div>
             </div>
-            <Image
-              className='absolute right-0 top-1/2 -translate-y-1/2'
-              src={IMG.src}
-              alt=''
-              width={955}
-              height={510}
-            />
+          </div>
+          <div className='rightSide'>
+            <Image src={IMG.src} alt='' width={954.05} height={508} />
           </div>
         </div>
-
-        {/* Slider */}
-        <ReactSwiperNewUpdates />
+        <div className='wrraper-slider'>
+          {/* Slider */}
+          <ReactSwiperNewUpdates />
+        </div>
       </div>
     </section>
   )
