@@ -159,6 +159,15 @@
   }
 }
 
+@media screen and (min-width: 1281px) {
+  .div-toggle-menu {
+    display: none;
+  }
+  #header .header-wrapper > nav {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   #header {
     background: unset;
@@ -180,6 +189,9 @@
       width: 125px;
       margin-top: 10px;
     }
+  }
+  #header .header-wrapper > nav {
+    display: none;
   }
   #header .header-wrapper nav {
     align-items: baseline;

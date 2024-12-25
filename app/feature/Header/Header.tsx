@@ -85,7 +85,7 @@ export default function Header() {
         {/* Available Soon */}
         <ButtonHeader />
 
-        <div className='div-toggle-menu block items-center xl:invisible xl:w-0 xl:opacity-0'>
+        <div className='div-toggle-menu block items-center'>
           {/* Menu button (small view only) */}
           <button
             onClick={toggleMenu}
