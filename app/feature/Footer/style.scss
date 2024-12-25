@@ -1,4 +1,4 @@
-@import './../../mixin.scss';
+@use './../../mixin';
 
 #footer {
   &::before {
@@ -34,7 +34,7 @@
 
     h3 {
 
-      @include common-title;
+      @include mixin.common-title;
     }
   }
 

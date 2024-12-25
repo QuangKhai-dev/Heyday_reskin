@@ -1,4 +1,4 @@
-@import './../../mixin';
+@use './../../mixin';
 
 #gameplay {
   .gameplay-item {
@@ -8,7 +8,7 @@
     backdrop-filter: blur(10px);
 
     .animate-title {
-      @include common-title;
+      @include mixin.common-title;
       background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

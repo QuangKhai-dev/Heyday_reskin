@@ -1,23 +1,27 @@
-@import './../../mixin';
+@use './../../mixin';
 
 #gameFiM {
   h3 {
     background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @include display-tile;
+    @include mixin.display-tile;
     max-width: 41.875rem;
   }
 }
+
 #gameFiM {
   margin-top: 8rem;
+
   .swiper {
     overflow: visible;
     margin-top: 16rem;
   }
+
   .gamefiMe {
     margin-top: 3.75rem;
   }
+
   .gamefiMe-item {
     position: relative;
     width: 100%;
@@ -35,6 +39,7 @@
       height: 100%;
       position: absolute;
     }
+
     .gamefiMe-item-image {
       position: absolute;
       top: 50%;
@@ -43,6 +48,7 @@
       width: 81%;
       height: auto;
       aspect-ratio: 1 / 1;
+
       &.active {
         &::before {
           content: '';
@@ -53,11 +59,9 @@
           width: 114%;
           height: auto;
           border-radius: 50%;
-          background: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 1) 70%,
-            rgba(255, 255, 255, 0) 100%
-          );
+          background: radial-gradient(circle,
+              rgba(255, 255, 255, 1) 70%,
+              rgba(255, 255, 255, 0) 100%);
           z-index: -1;
           filter: blur(20px);
           opacity: 1;
@@ -66,12 +70,14 @@
       }
     }
   }
+
   .gameFiBg {
     width: 80%;
     max-width: 1280px;
     top: 80%;
     transform: translateY(-50%);
   }
+
   .content {
     max-width: 36.875rem;
   }
@@ -82,6 +88,7 @@
     .gameFiBg {
       width: 70%;
     }
+
     .swiper {
       margin-top: 10rem;
     }
@@ -96,8 +103,10 @@
       position: static;
       transform: unset;
     }
+
     .group-content {
       width: 100%;
+
       h3,
       .content {
         max-width: 80%;
@@ -105,15 +114,19 @@
         text-align: center;
       }
     }
+
     .content {
       max-width: unset;
     }
+
     h2 {
       align-items: center;
     }
+
     h3 {
       font-size: 6vw;
     }
+
     .swiper {
       margin-top: 3rem;
     }
@@ -129,13 +142,16 @@
 @media screen and (max-width: 576px) {
   #gameFiM {
     margin-top: 15vh;
+
     .group-content {
       margin-bottom: 1rem;
+
       h3,
       .content {
         max-width: 100%;
       }
     }
+
     .swiper {
       margin-top: 2rem;
     }
