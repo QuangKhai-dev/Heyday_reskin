@@ -2,6 +2,7 @@ import React from 'react'
 import './style.scss'
 import { gameplayList } from './../../data'
 import GamePlayItem from './GamePlayItem'
+import ReactSwiperCustomGamePLay from '@/app/components/carousel/ReactSwiperCustomGamePLay'
 export default function Gameplay() {
   return (
     <section
@@ -12,7 +13,7 @@ export default function Gameplay() {
         <div className='title'>
           <h2 className='lineskin'>Game play</h2>
         </div>
-        <div className='flex gap-7'>
+        <div className='content-desktop flex gap-7'>
           <div className='flex-1 space-y-6'>
             {gameplayList.map((item, index) => {
               if (index % 2 === 0) {
@@ -40,6 +41,7 @@ export default function Gameplay() {
             })}
           </div>
         </div>
+        <ReactSwiperCustomGamePLay />
       </div>
     </section>
   )

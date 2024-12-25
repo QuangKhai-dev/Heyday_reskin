@@ -20,9 +20,10 @@ export default function Page() {
       <GameFiM />
       <MysticalStone />
       <AuctionHouse />
-      <Gameplay />
+      
       <NewsUpdate />
  */}
+      <Gameplay />
       <GameXStudio />
       <Footer />
     </>

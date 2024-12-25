@@ -46,8 +46,100 @@
         }
       }
     }
+
     .desc {
       font-size: 1.25rem;
     }
   }
+
+  .swiperGamePlay {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:1024px) {
+  #gameplay {
+    @apply px-8;
+
+    .title {
+      text-align: center;
+
+      h2 {
+        &::after {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    .gameplay-item {
+      .desc {
+        font-size: 12px;
+      }
+    }
+
+    .content-desktop {
+      display: none;
+    }
+
+    .swiper-pagination {
+      text-align: center;
+    }
+
+    .dot-active,
+    .swiperGamePlay .dot-active,
+    .swiper-newupdate .dot-active {
+      display: none;
+    }
+
+    .swiper-pagination-bullet-active .dot-active,
+    .swiperGamePlay .swiper-pagination-bullet-active .dot-active,
+    .swiper-newupdate .swiper-pagination-bullet-active .dot-active {
+      display: inline-block;
+    }
+
+    .swiper-pagination-bullet-active .dot-unActive,
+    .swiperGamePlay .swiper-pagination-bullet-active .dot-unActive,
+    .swiper-newupdate .swiper-pagination-bullet-active .dot-unActive {
+      display: none;
+    }
+
+    .dot-carousel-gamefim {
+      width: 13px !important;
+      height: 13px !important;
+      display: inline-block !important;
+      background-color: unset !important;
+      opacity: 1 !important;
+    }
+
+    // display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #gameplay {
+    h3 {
+      font-size: 12px !important;
+    }
+
+    .gameplay-item {
+      .angle-icon {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      .desc {
+        padding-top: 20px;
+        font-size: 10px;
+      }
+
+    }
+  }
+
 }

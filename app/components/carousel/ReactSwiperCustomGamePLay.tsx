@@ -7,6 +7,7 @@ import { GameplayBox } from '../frames'
 import dotActiveCarousel from '@/public/images/dot_active_carousel.png'
 import dotUnactive from '@/public/images/dot_carousel.png'
 import 'swiper/css'
+import GamePlayItem from '@/app/feature/GamePlay/GamePlayItem'
 
 const ReactSwiperCustomGamePLay = () => {
   return (
@@ -18,7 +19,7 @@ const ReactSwiperCustomGamePLay = () => {
       pagination={{
         clickable: true,
         renderBullet: function (_index, className) {
-          return `<span class="dot-carousel-gamefim ${className}">
+          return `<span class="dot-carousel-gamefim mr-2 ${className}">
         <img class="dot-unActive" src=${dotUnactive.src} />
         <img class="dot-active" src=${dotActiveCarousel.src} />
         </span>`
@@ -30,11 +31,10 @@ const ReactSwiperCustomGamePLay = () => {
         <div className='space-y-5'>
           {gameplayList.slice(0, 4).map((gameplay, index) => {
             return (
-              <GameplayBox
+              <GamePlayItem
                 key={index}
-                width={43.75}
                 title={gameplay.title}
-                subtitle={gameplay.subtitle}
+                content={gameplay.subtitle}
               />
             )
           })}
@@ -44,11 +44,10 @@ const ReactSwiperCustomGamePLay = () => {
         <div className='space-y-5'>
           {gameplayList.slice(4, 8).map((gameplay, index) => {
             return (
-              <GameplayBox
+              <GamePlayItem
                 key={index}
-                width={43.75}
                 title={gameplay.title}
-                subtitle={gameplay.subtitle}
+                content={gameplay.subtitle}
               />
             )
           })}
@@ -58,11 +57,10 @@ const ReactSwiperCustomGamePLay = () => {
         <div className='space-y-5'>
           {gameplayList.slice(8, 12).map((gameplay, index) => {
             return (
-              <GameplayBox
+              <GamePlayItem
                 key={index}
-                width={43.75}
                 title={gameplay.title}
-                subtitle={gameplay.subtitle}
+                content={gameplay.subtitle}
               />
             )
           })}
