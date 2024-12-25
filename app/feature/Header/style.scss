@@ -175,6 +175,16 @@
     backdrop-filter: unset;
     .div-toggle-menu {
       order: 0;
+      > button {
+        padding: 0;
+        width: 50px;
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
     }
     .button-action-header {
       order: 2;
@@ -190,13 +200,16 @@
       margin-top: 10px;
     }
   }
-  #header .header-wrapper > nav {
-    display: none;
+  #header .header-wrapper {
+    > nav {
+      display: none;
+    }
+    nav {
+      align-items: baseline;
+    }
   }
-  #header .header-wrapper nav {
-    align-items: baseline;
-  }
-  #header {
+
+  #header .header-wrapper #header {
     .header-wrapper {
       .button-action-header {
         span {
@@ -222,6 +235,11 @@
     }
     .header-logo {
       width: 78px;
+    }
+    .div-toggle-menu {
+      > button {
+        width: 27px;
+      }
     }
   }
 }

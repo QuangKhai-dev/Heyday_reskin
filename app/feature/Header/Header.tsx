@@ -4,11 +4,12 @@ import logo from '@/public/2312/logo.png'
 import iconRight from '@/public/2312/icons/menu-arrow-right.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './style.scss'
 import ButtonHeader from './ButtonHeader'
 import { MediaList } from '@/app/components/structures'
 import imageButton from '@/public/images/svgButton.png'
+import menuBtn from '@/public/2312/menu-button.png'
 import { SmallContainer } from '@/app/components/frames'
 export default function Header() {
   const [idActive, setIdActive] = useState(0)
@@ -91,11 +92,7 @@ export default function Header() {
             onClick={toggleMenu}
             className='hover:bg-gray-700 rounded-md p-2 transition-all duration-300'
           >
-            <div className='space-y-1 sm:space-y-2'>
-              <div className='h-0.5 w-5 rounded-md bg-[#FFC671] sm:h-1 sm:w-8'></div>
-              <div className='h-0.5 w-5 rounded-md bg-[#FFC671] sm:h-1 sm:w-8'></div>
-              <div className='h-0.5 w-5 rounded-md bg-[#FFC671] sm:h-1 sm:w-8'></div>
-            </div>
+            <Image src={menuBtn} width={27} height={26} alt='' />
           </button>
 
           {/* Sidebar */}
