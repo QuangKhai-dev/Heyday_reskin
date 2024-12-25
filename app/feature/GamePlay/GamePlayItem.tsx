@@ -46,7 +46,12 @@ const GamePlayItem = ({ title, content }: IProps) => {
       >
         <h3>{title}</h3>
         <div className='angle-icon'>
-          <Image fill alt='icon gameplay' src='/2312/icon_gameplay.png' />
+          <Image
+            className={height !== 0 ? 'rotate-180' : 'rotate-0'}
+            fill
+            alt='icon gameplay'
+            src='/2312/icon_gameplay.png'
+          />
         </div>
       </div>
       <AnimateHeight

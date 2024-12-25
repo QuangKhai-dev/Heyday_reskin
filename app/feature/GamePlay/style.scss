@@ -34,6 +34,10 @@
         }
       }
 
+      .angle-icon-rotate {
+        transform: rotate(180deg);
+      }
+
       &:hover {
         background-image: unset;
         -webkit-background-clip: unset;
@@ -44,6 +48,9 @@
         .angle-icon::after {
           opacity: 1;
         }
+
+
+
       }
     }
 
