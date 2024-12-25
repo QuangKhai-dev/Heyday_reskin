@@ -8,7 +8,7 @@ export default function MysticalStone() {
         <div className='title'>
           <h2 className='lineskin'>Mystical Stone</h2>
         </div>
-        <div className='flex items-center'>
+        <div className='content flex items-center'>
           <p>{masticalStone.phaseGraph}</p>
           <div className='highlight-wrapper relative p-5'>
             <Image
@@ -27,8 +27,14 @@ export default function MysticalStone() {
             </ul>
           </div>
         </div>
-        <div className='relative h-[489px]'>
-          <Image fill src='/2312/list-stone.png' alt='list-stone' />
+        <div className='relative'>
+          <Image
+            width={1920}
+            height={500}
+            src='/2312/list-stone.png'
+            className='object-contain'
+            alt='list-stone'
+          />
         </div>
       </div>
     </section>

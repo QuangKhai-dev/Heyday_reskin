@@ -18,11 +18,12 @@ export default function Page() {
 
       {/* <Header />
       <GameFiM />
-      <MysticalStone />
+      
       <AuctionHouse />
       
       <NewsUpdate />
  */}
+      <MysticalStone />
       <Gameplay />
       <GameXStudio />
       <Footer />
