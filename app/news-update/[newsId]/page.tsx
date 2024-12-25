@@ -1,7 +1,7 @@
 import Header from '@/app/feature/Header/Header'
 import { texture } from '@/public/images/newsUpdate'
 import GameXStudio from '@/app/GameXStudio'
-import Footer from '@/app/Footer'
+
 import { contents } from './contentsData'
 import { MotifContainer } from '@/app/components/frames'
 import { MediaList, Memarcation } from '@/app/components/structures'
@@ -14,6 +14,7 @@ import {
 } from '@/app/components/newsContents'
 import ButtonDetailPage from '@/app/components/frames/ButtonDetailPage'
 import { IconDefs } from '@/app/components/icons/Icons'
+import Footer from '@/app/feature/Footer/Footer'
 
 export default async function NewsPage({
   params

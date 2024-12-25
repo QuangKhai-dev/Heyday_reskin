@@ -43,9 +43,10 @@
 
 @mixin date-caption {
   font-family: 'Cinzel', serif;
-  font-size: 0.625rem;
+  font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;
+  color: #d0b285 !important;
 }
 
 @mixin menu {

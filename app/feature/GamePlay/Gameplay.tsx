@@ -6,11 +6,11 @@ export default function Gameplay() {
   return (
     <section
       id='gameplay'
-      className='relative flex scroll-mt-60 items-center pt-[140px] duration-300'
+      className='relative flex scroll-mt-60 items-center pt-40 duration-300'
     >
       <div className='container-1640'>
         <div className='title'>
-          <h2>Game play</h2>
+          <h2 className='lineskin'>Game play</h2>
         </div>
         <div className='flex gap-7'>
           <div className='flex-1 space-y-6'>

@@ -37,7 +37,7 @@ export default function GameFiM() {
       <div className='container-1640 relative z-10 pt-28'>
         <div className='relative min-h-[800px]'>
           <div className='relative z-10 w-1/2'>
-            <h2>gamefi mechanism</h2>
+            <h2 className='lineskin'>gamefi mechanism</h2>
             <h3 className='titleFont mt-4 font-light text-white lg:mt-5'>
               {text.name}
             </h3>

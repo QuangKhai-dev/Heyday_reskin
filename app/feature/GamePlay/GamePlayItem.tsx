@@ -54,7 +54,7 @@ const GamePlayItem = ({ title, content }: IProps) => {
         duration={500}
         height={height} // see props documentation below
       >
-        <p className='pt-10 text-white'>{content}</p>
+        <p className='desc pt-10 text-white'>{content}</p>
       </AnimateHeight>
     </div>
   )

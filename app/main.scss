@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './mixin.scss';
+@import './mixin';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 // ================================ Text ================================
@@ -54,7 +54,6 @@ body {
   padding-bottom: 4.25rem;
 }
 
-// ================================  HEADER ================================
 h2.lineskin {
   display: flex;
   flex-direction: column;
@@ -63,14 +62,18 @@ h2.lineskin {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+  margin-bottom: 2.5rem;
   @include section-title;
   &::after {
-    position: absolute;
+    content: '';
     background-image: url('/2312/line_header.png');
     width: 324px;
     display: block;
-    height: 36px;
-    content: '';
-    bottom: -50px;
+    height: auto;
+    aspect-ratio: 324/35;
   }
+}
+
+.date {
+  @include date-caption;
 }

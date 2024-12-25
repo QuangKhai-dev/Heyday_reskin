@@ -1,27 +1,8 @@
-@import './../../mixin.scss';
+@import './../../mixin';
 
 #gameplay {
-  h2 {
-    position: relative;
-    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @include section-title;
-    margin-bottom: 120px;
-
-    &::after {
-      position: absolute;
-      background-image: url('./../../../public/2312/line_header.png');
-      width: 324px;
-      display: block;
-      height: 36px;
-      content: "";
-      bottom: -50px;
-    }
-  }
-
   .gameplay-item {
-    border: 1px solid #DFAD69;
+    border: 1px solid #dfad69;
     padding: 25px 30px 25px 30px;
     background: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
@@ -38,10 +19,10 @@
         position: relative;
 
         &::after {
-          content: "";
+          content: '';
           width: 39.25px;
           height: 39.25px;
-          background: #FFFFFF;
+          background: #ffffff;
           filter: blur(30px);
           transition: all 0.3s;
           position: absolute;
@@ -65,7 +46,8 @@
         }
       }
     }
-
-
+    .desc {
+      font-size: 1.25rem;
+    }
   }
 }

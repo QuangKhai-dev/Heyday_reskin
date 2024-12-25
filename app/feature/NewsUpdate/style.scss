@@ -1,25 +1,6 @@
 @import './../../mixin.scss';
 
 #community {
-  h2 {
-    position: relative;
-    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @include section-title;
-    margin-bottom: 90px;
-
-    &::after {
-      position: absolute;
-      background-image: url('./../../../public/2312/line_header.png');
-      width: 324px;
-      display: block;
-      height: 36px;
-      content: "";
-      bottom: -50px;
-    }
-  }
-
   h3 {
     background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
     -webkit-background-clip: text;
@@ -62,7 +43,7 @@
     }
 
     .game-fi-box-wrapper {
-      border: 1px solid #DFAD69;
+      border: 1px solid #dfad69;
 
       .content {
         p {
@@ -95,6 +76,68 @@
         p {
           font-size: 20px;
         }
+      }
+    }
+  }
+  .main-news {
+    position: relative;
+    .leftSide {
+      width: 60%;
+      max-width: 1009px;
+      .animation-readmore {
+        span {
+          background: var(
+            --text-gardient,
+            linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 1.5rem;
+          font-family: 'Cinzel', serif;
+          font-weight: bold;
+        }
+      }
+      .main-news-item-footer,
+      .main-news-item-content {
+        max-width: 830px;
+      }
+    }
+
+    .rightSide {
+      position: absolute;
+      top: -20px;
+      right: -8%;
+      width: 60%;
+      height: auto;
+      aspect-ratio: 954.05/508.83;
+      z-index: -1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .animation-readmore {
+    position: relative;
+    padding-left: calc(2.125rem + 0.625rem);
+    transition: all 0.5s ease-in-out;
+    * {
+      transition: all 0.5s ease-in-out;
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 2.125rem;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      padding-left: 0;
+      padding-right: calc(2.125rem + 0.625rem);
+      svg {
+        left: 90%;
       }
     }
   }
