@@ -17,7 +17,7 @@ const ReactSwiperNewUpdates = () => {
   return (
     <>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1.2}
         spaceBetween={8}
         onBeforeInit={swiper => {
           swiperRef.current = swiper
@@ -42,11 +42,19 @@ const ReactSwiperNewUpdates = () => {
         // responsive slide
         breakpoints={{
           768: {
-            slidesPerView: 1.2,
-            spaceBetween: 30
+            slidesPerView: 1.5,
+            spaceBetween: 40
+          },
+          1024: {
+            slidesPerView: 1.8,
+            spaceBetween: 40
           },
           1280: {
-            slidesPerView: 2.6,
+            slidesPerView: 2.2,
+            spaceBetween: 40
+          },
+          1440: {
+            slidesPerView: 3,
             spaceBetween: 40
           }
         }}

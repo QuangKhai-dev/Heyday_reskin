@@ -3,12 +3,12 @@ import { auctionHouse } from './../../data'
 import Image from 'next/image'
 export default function AuctionHouse() {
   return (
-    <section id='auctionHouse' className='mt-40'>
+    <section id='auctionHouse' className='pt-40'>
       <div className='container-1640'>
         <div className='title'>
           <h2 className='lineskin'>Auction House</h2>
         </div>
-        <div className='flex items-center'>
+        <div className='content flex items-center'>
           <p>{auctionHouse.phaseGraph}</p>
           <div className='highlight-wrapper relative p-5'>
             <Image
@@ -31,7 +31,7 @@ export default function AuctionHouse() {
       <div className='image-main'>
         <Image
           src='/2312/auction-house.png'
-          alt='auction house'
+          alt='auction-house'
           width={1794}
           height={623}
         />
