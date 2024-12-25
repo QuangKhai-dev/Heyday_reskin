@@ -85,7 +85,7 @@ export default function GameFiM() {
           {gamefiMe.stories.map((el, id) => {
             return (
               <SwiperSlide
-                className='gamefiMe-item'
+                className='gamefiMe-item cursor-pointer'
                 key={id}
                 onClick={() =>
                   handleChangeText({
