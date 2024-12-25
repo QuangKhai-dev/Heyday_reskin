@@ -54,6 +54,23 @@ body {
   padding-bottom: 4.25rem;
 }
 
-
-
 // ================================  HEADER ================================
+h2.lineskin {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  @include section-title;
+  &::after {
+    position: absolute;
+    background-image: url('/2312/line_header.png');
+    width: 324px;
+    display: block;
+    height: 36px;
+    content: '';
+    bottom: -50px;
+  }
+}

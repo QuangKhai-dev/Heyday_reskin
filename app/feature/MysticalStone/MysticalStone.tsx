@@ -3,10 +3,10 @@ import { masticalStone } from './../../data'
 import Image from 'next/image'
 export default function MysticalStone() {
   return (
-    <section id='mysticalStone'>
+    <section id='mysticalStone' className='pt-40'>
       <div className='container-1640'>
         <div className='title'>
-          <h2>Mystical Stone</h2>
+          <h2 className='lineskin'>Mystical Stone</h2>
         </div>
         <div className='flex items-center'>
           <p>{masticalStone.phaseGraph}</p>

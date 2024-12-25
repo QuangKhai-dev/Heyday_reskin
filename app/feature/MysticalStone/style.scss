@@ -1,23 +1,12 @@
 @import './../../mixin.scss';
 
 #mysticalStone {
-  h2 {
-    position: relative;
-    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @include section-title;
-    margin-bottom: 120px;
+  h2.lineskin {
+    margin-bottom: 2.5rem;
+  }
 
-    &::after {
-      position: absolute;
-      background-image: url('./../../../public/2312/line_header.png');
-      width: 324px;
-      display: block;
-      height: 36px;
-      content: "";
-      bottom: -50px;
-    }
+  h3 {
+    max-width: 41.875rem;
   }
 
   p {
@@ -33,15 +22,13 @@
     padding-top: 70px;
 
     ul {
-
-
       li {
         position: relative;
         color: white;
 
         &::before {
-          content: "";
-          background-image: url("./../../../public/2312/dot_image.png");
+          content: '';
+          background-image: url('./../../../public/2312/dot_image.png');
           width: 32px;
           height: 32px;
           display: inline-block;
