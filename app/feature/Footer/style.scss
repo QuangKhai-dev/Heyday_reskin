@@ -1,8 +1,23 @@
 @import './../../mixin.scss';
 
 #footer {
+  &::before {
+    content: "";
+    background: url('./../../../public/2312/wrapperFooter.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: bottom;
+  }
+
 
   .line-footer {
+    z-index: 2;
     position: absolute;
     width: 1640px;
     height: 2px;
@@ -14,6 +29,9 @@
   }
 
   .footer-text {
+    position: relative;
+    z-index: 3;
+
     h3 {
 
       @include common-title;
