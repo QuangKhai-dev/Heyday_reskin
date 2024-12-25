@@ -9,6 +9,7 @@ import {
   PCIcon
 } from './components/icons'
 import Link from 'next/link'
+import { MediaList } from './components/structures'
 
 const operatingSystemIcons = [
   {
@@ -60,12 +61,14 @@ const Banner = () => {
           />
           <div className='div-translateY'>
             {/* Title */}
-            <h1>
-              <span>RISE & CONQUER</span>
-            </h1>
+            <h1>{/* <span>RISE & CONQUER</span> */}</h1>
             {/* List app */}
             <div className='list-apps'>{handleRenderApp()}</div>
           </div>
+        </div>
+        {/* Social Networks */}
+        <div className='social absolute left-0 top-2/4 z-20 hidden h-max w-full translate-y-[-50%] duration-300 md:flex lg:w-max'>
+          <MediaList orientation='vertital' page='home' />
         </div>
       </div>
     </section>

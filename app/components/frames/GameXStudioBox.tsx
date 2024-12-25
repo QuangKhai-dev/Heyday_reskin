@@ -9,7 +9,7 @@ export default function GameXStudioBox() {
     <div className='flexCenter mx-auto max-w-[861.31px]' data-aos='fade-up'>
       <div className='logos flex w-full items-center justify-between gap-5 px-0'>
         <Image src={EBWLogo} alt='EBWLogo' width={169} />
-        <Image src={BB} alt='BChain' width={171} className='mt-[-21px]' />
+        <Image src={BB} alt='BChain' width={171} className='mt-[-35px]' />
         <Image src={X} alt='X' width={252.31} />
       </div>
     </div>

@@ -44,7 +44,7 @@ export default function Home() {
     >
       {/* Social Networks */}
       <div className='social absolute left-0 top-2/4 z-20 hidden h-max w-full translate-y-[-50%] duration-300 md:flex lg:w-max'>
-        <MediaList orientation='vertital' page='home' className='w-[200px]' />
+        <MediaList orientation='vertital' page='home' className='w-max' />
       </div>
 
       {/* Main Content */}
