@@ -3,7 +3,6 @@ import { gameplayList } from '@/app/data'
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
-import { GameplayBox } from '../frames'
 import dotActiveCarousel from '@/public/images/dot_active_carousel.png'
 import dotUnactive from '@/public/images/dot_carousel.png'
 import 'swiper/css'
@@ -13,7 +12,7 @@ const ReactSwiperCustomGamePLay = () => {
   return (
     <Swiper
       className='swiperGamePlay'
-      slidesPerView={1.1}
+      slidesPerView={1}
       spaceBetween={20}
       // centeredSlides={true}
       pagination={{
@@ -34,7 +33,7 @@ const ReactSwiperCustomGamePLay = () => {
               <GamePlayItem
                 key={index}
                 title={gameplay.title}
-                content={gameplay.subtitle}
+                content={gameplay.subtitle || ''}
               />
             )
           })}
@@ -47,7 +46,7 @@ const ReactSwiperCustomGamePLay = () => {
               <GamePlayItem
                 key={index}
                 title={gameplay.title}
-                content={gameplay.subtitle}
+                content={gameplay.subtitle || ''}
               />
             )
           })}
@@ -56,11 +55,20 @@ const ReactSwiperCustomGamePLay = () => {
       <SwiperSlide key={3}>
         <div className='space-y-5'>
           {gameplayList.slice(8, 12).map((gameplay, index) => {
+            if (gameplay.title === 'others') {
+              return (
+                <GamePlayItem
+                  key={index}
+                  title={gameplay.title}
+                  content={gameplay.subOthers || ''}
+                />
+              )
+            }
             return (
               <GamePlayItem
                 key={index}
                 title={gameplay.title}
-                content={gameplay.subtitle}
+                content={gameplay.subtitle || ''}
               />
             )
           })}

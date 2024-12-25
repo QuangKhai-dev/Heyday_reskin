@@ -5,7 +5,7 @@ import AnimateHeight, { Height } from 'react-animate-height'
 
 interface IProps {
   title: string
-  content: string | undefined
+  content: string | string[]
 }
 
 const GamePlayItem = ({ title, content }: IProps) => {
@@ -59,7 +59,19 @@ const GamePlayItem = ({ title, content }: IProps) => {
         duration={500}
         height={height} // see props documentation below
       >
-        <p className='desc pt-10 text-white'>{content}</p>
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((item, index) => {
+              return (
+                <li className='desc pt-10 text-white' key={index}>
+                  {item}
+                </li>
+              )
+            })}
+          </ul>
+        ) : (
+          <p className='desc pt-10 text-white'>{content}</p>
+        )}
       </AnimateHeight>
     </div>
   )

@@ -21,7 +21,7 @@ export default function Gameplay() {
                   <GamePlayItem
                     key={index}
                     title={item.title}
-                    content={item.subtitle}
+                    content={item.subtitle || ''}
                   />
                 )
               }
@@ -30,13 +30,23 @@ export default function Gameplay() {
           <div className='flex-1 space-y-6'>
             {gameplayList.map((item, index) => {
               if (index % 2 === 1) {
-                return (
-                  <GamePlayItem
-                    key={index}
-                    title={item.title}
-                    content={item.subtitle}
-                  />
-                )
+                if (item.title == 'others') {
+                  return (
+                    <GamePlayItem
+                      key={index}
+                      title={item.title}
+                      content={item.subOthers || ''}
+                    />
+                  )
+                } else {
+                  return (
+                    <GamePlayItem
+                      key={index}
+                      title={item.title}
+                      content={item.subtitle || ''}
+                    />
+                  )
+                }
               }
             })}
           </div>

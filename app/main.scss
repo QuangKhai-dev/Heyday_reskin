@@ -3,11 +3,13 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import './mixin';
+
 // ================================ Text ================================
 html {
   width: 100vw;
   overflow-x: hidden;
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
@@ -62,6 +64,7 @@ h2.lineskin {
   position: relative;
   margin-bottom: 2.5rem;
   @include section-title;
+
   &::after {
     content: '';
     background-image: url('/2312/line_header.png');
@@ -99,15 +102,18 @@ h2.lineskin {
     left: 0 !important;
   }
 }
+
 @media screen and (max-width: 1440px) {
   body {
     font-size: 1.2rem;
   }
 }
+
 @media screen and (max-width: 820px) {
   h2.lineskin {
     margin-bottom: 1.5rem;
     font-size: 7.5vw;
+
     &::after {
       width: 250px;
     }
@@ -115,6 +121,7 @@ h2.lineskin {
 }
 
 @media screen and (max-width: 768px) {
+
   .container-1920,
   .container-1640 {
     padding-right: 1rem;
@@ -125,10 +132,13 @@ h2.lineskin {
 @media screen and (max-width: 576px) {
   h2.lineskin {
     margin-bottom: 1rem;
+
     &::after {
       width: 100px;
+      margin-top: 10px;
     }
   }
+
   body {
     font-size: 1rem;
   }

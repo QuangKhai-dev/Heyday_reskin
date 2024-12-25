@@ -35,7 +35,7 @@
 
   .image-main {
     width: 100%;
-    margin-top: -8%;
+    margin-top: -8rem;
 
     img {
       width: 100%;
@@ -114,6 +114,13 @@
     .highlight-wrapper {
       padding-top: 90px;
       margin-top: 20px;
+      transform: scale(0.8);
+
+      ul {
+        li {
+          font-size: 22px;
+        }
+      }
     }
 
     .content {
@@ -162,6 +169,7 @@
 
     .content {
       p {
+        margin-top: 30px;
         width: 100%;
         padding-right: 0;
         font-size: 12px;

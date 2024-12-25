@@ -8,7 +8,7 @@ import './style.scss'
 import Icons from '@/app/components/icons/Icons'
 export default function NewsUpdate() {
   return (
-    <section id='community' className='pb-16 pt-40'>
+    <section id='community' className='pt-40'>
       <div className='container-1640 z-10'>
         {/* Main News */}
         <h2 className='lineskin title-mobile'>news & updates</h2>
@@ -44,8 +44,10 @@ export default function NewsUpdate() {
             <Image src={IMG.src} alt='' width={954.05} height={508} />
           </div>
         </div>
-        {/* Slider */}
-        <ReactSwiperNewUpdates />
+        <div className='wrraper-slider'>
+          {/* Slider */}
+          <ReactSwiperNewUpdates />
+        </div>
       </div>
     </section>
   )

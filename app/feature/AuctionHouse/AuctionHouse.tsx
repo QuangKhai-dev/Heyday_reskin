@@ -28,7 +28,7 @@ export default function AuctionHouse() {
           </div>
         </div>
       </div>
-      <div className='image-main'>
+      <div className='image-main ml-auto mr-auto max-w-[1920px]'>
         <Image
           src='/2312/auction-house.png'
           alt='auction-house'

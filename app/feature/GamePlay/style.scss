@@ -57,6 +57,13 @@
     .desc {
       font-size: 1.25rem;
     }
+
+    li {
+      @apply pt-5;
+      list-style-position: inside !important;
+      list-style: disc;
+      text-transform: capitalize;
+    }
   }
 
   .swiperGamePlay {
@@ -139,6 +146,10 @@
       text-align: center;
     }
 
+    .swiperGamePlay .swiper-pagination {
+      bottom: -50px;
+    }
+
     .dot-active,
     .swiperGamePlay .dot-active,
     .swiper-newupdate .dot-active {
@@ -171,6 +182,8 @@
 
 @media screen and (max-width: 576px) {
   #gameplay {
+    padding-top: 100px;
+
     h3 {
       font-size: 12px !important;
     }
@@ -189,7 +202,7 @@
     }
 
     .swiperGamePlay {
-      padding-bottom: 50px;
+      padding-bottom: 30px;
     }
   }
 

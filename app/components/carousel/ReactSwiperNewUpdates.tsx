@@ -17,7 +17,7 @@ const ReactSwiperNewUpdates = () => {
   return (
     <>
       <Swiper
-        slidesPerView={1.2}
+        slidesPerView={1}
         spaceBetween={8}
         onBeforeInit={swiper => {
           swiperRef.current = swiper
@@ -46,7 +46,7 @@ const ReactSwiperNewUpdates = () => {
             spaceBetween: 40
           },
           1024: {
-            slidesPerView: 1.8,
+            slidesPerView: 1.7,
             spaceBetween: 40
           },
           1280: {

@@ -1,6 +1,7 @@
 import cn from '@/app/utils/cn'
 import Icons from '../icons/Icons'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface NewUpdates {
   id_story?: number | string
@@ -14,10 +15,14 @@ export default function NewUpdatesBox({
   date,
   title,
   subtitle,
-  Img
+  Img,
+  id_story
 }: NewUpdates) {
   return (
-    <div className='game-fi-box group relative cursor-pointer overflow-hidden bg-black bg-opacity-35 backdrop-blur-sm'>
+    <Link
+      href={`news-update/${id_story}`}
+      className='game-fi-box group relative block cursor-pointer overflow-hidden bg-black bg-opacity-35 backdrop-blur-sm'
+    >
       <div className='game-fi-box-wrapper'>
         <Image
           className='topLeft-icon absolute'
@@ -48,8 +53,8 @@ export default function NewUpdatesBox({
           src='/2312/bottomRight-update.png'
         />
         {/* Content on Frame */}
-        <div className='group relative flex h-full bg-cover bg-no-repeat'>
-          <div className='z-10 ml-10 flex w-[60%] flex-col gap-3 pt-4'>
+        <div className='game-fi-content group relative flex h-full bg-cover bg-no-repeat'>
+          <div className='z-10 ml-5 flex w-[60%] flex-col gap-3 pt-4 sm:ml-10'>
             <h6 className='font-beaufortLoL text-[#D0B285]'>{date}</h6>
 
             <h4 className={cn('line-clamp-2 uppercase group-hover:text-white')}>
@@ -74,6 +79,6 @@ export default function NewUpdatesBox({
           <span>Read more</span>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
