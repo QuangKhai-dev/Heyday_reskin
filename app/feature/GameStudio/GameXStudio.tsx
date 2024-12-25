@@ -1,7 +1,7 @@
 import React from 'react'
-import GameXStudioBox from './components/frames/GameXStudioBox'
-import LineReskin from './components/structures/LineReskin'
-
+import './style.scss'
+import LineReskin from '@/app/components/structures/LineReskin'
+import { GameXStudioBox } from '@/app/components/frames'
 export default function GameXStudio() {
   return (
     <section id='support' className='pt-160 pb-68'>
