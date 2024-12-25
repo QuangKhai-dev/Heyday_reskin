@@ -30,7 +30,7 @@ interface Props extends SVG {
   className?: string
 }
 
-export default function MediaList({ orientation, className }: Props) {
+export default function MediaList({ orientation }: Props) {
   return (
     <section
       className={cn(`mediaList flex gap-4`, {

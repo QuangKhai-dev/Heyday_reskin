@@ -5,7 +5,7 @@ import { Item4 } from '@/app/components/icons/new-up/item-4'
 import gameFi1 from '@/app/components/icons/gameFi/gameFi1.png'
 import gameFi2 from '@/app/components/icons/gameFi/gameFi2.png'
 import gameFi3 from '@/app/components/icons/gameFi/gameFi3.png'
-import gameFi4 from '@/app/components/icons/gameFi/gameFi4.png'
+import gameFi4 from '@/public/2312/gameFi4.png'
 import gameFi5 from '@/app/components/icons/gameFi/gameFi5.png'
 import gameFi6 from '@/app/components/icons/gameFi/gameFi6.png'
 

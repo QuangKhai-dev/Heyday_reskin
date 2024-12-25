@@ -14,7 +14,6 @@ export default function Page() {
   return (
     <>
       <Header />
-
       <Banner />
       <IconDefs />
       <GameFiM />
