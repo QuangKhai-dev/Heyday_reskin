@@ -6,6 +6,12 @@
   background: linear-gradient(90deg, #feffbc 0%, #ffc671 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 1440px) {
+    font-size: 4vw;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 6vw;
+  }
 }
 
 @mixin display-tile {
@@ -13,6 +19,12 @@
   font-size: 3rem;
   line-height: calc(56 / 48);
   font-weight: 400;
+  @media screen and (max-width: 1440px) {
+    font-size: 3vw;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 5vw;
+  }
 }
 
 @mixin common-title {

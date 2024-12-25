@@ -35,7 +35,7 @@ export default function GameFiM() {
   return (
     <section id='gameFiM' className='scroll-mt-36 pt-11'>
       <div className='container-1640 relative z-10 pt-28'>
-        <div className='relative min-h-[800px]'>
+        <div className='relative'>
           <div className='relative z-10 w-1/2'>
             <h2 className='lineskin'>gamefi mechanism</h2>
             <h3 className='titleFont mt-4 font-light text-white lg:mt-5'>
@@ -46,7 +46,7 @@ export default function GameFiM() {
             </p>
           </div>
           <Image
-            className='absolute right-0 top-1/2 -translate-y-1/2'
+            className='gameFiBg absolute right-0'
             src={text.img.src}
             alt=''
             width={1280}
@@ -69,14 +69,10 @@ export default function GameFiM() {
           className='mySwiper'
           breakpoints={{
             768: {
-              slidesPerView: 1.2,
-              spaceBetween: 30
-            },
-            1280: {
-              slidesPerView: 2.4,
+              slidesPerView: 4,
               spaceBetween: 40
             },
-            1920: {
+            1024: {
               slidesPerView: 6,
               spaceBetween: 24
             }
