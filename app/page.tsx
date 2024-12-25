@@ -14,9 +14,9 @@ export default function Page() {
   return (
     <>
       <IconDefs />
+      {/* <Banner /> */}
+
       {/* <Header />
-      <Banner />
-      
       <GameFiM />
       <MysticalStone />
       <AuctionHouse />
