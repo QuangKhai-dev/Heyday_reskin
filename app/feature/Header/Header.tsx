@@ -10,19 +10,16 @@ import ButtonHeader from './ButtonHeader'
 import { MediaList } from '@/app/components/structures'
 import imageButton from '@/public/images/svgButton.png'
 import menuBtn from '@/public/2312/menu-button.png'
-import { SmallContainer } from '@/app/components/frames'
 export default function Header() {
   const [idActive, setIdActive] = useState(0)
   const [isMenuOpen, setIsMenuOpen] = useState(false) // Menu state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false) // Sidebar state
-  const [navs, setNav] = useState([
+  const [navs] = useState([
     { name: 'about', path: '/#section-banner', id: 0 },
     { name: 'game features', path: '/#gameplay', id: 1 },
     { name: 'community', path: '/#community', id: 2 },
     { name: 'support', path: '/#support', id: 3 }
   ])
-
-  const currentPath = typeof window !== 'undefined' ? window.location.hash : ''
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -108,7 +105,7 @@ export default function Header() {
                 onClick={closeSidebar}
                 className='text-3xl font-bold text-white'
               >
-                <img src={imageButton.src} alt='' width={16} />
+                <Image src={imageButton.src} alt='' width={16} height={16} />
               </button>
             </div>
 

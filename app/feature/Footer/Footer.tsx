@@ -1,11 +1,12 @@
 'use client'
 import { MediaList } from '@/app/components/structures'
-import { dot, logo } from '@/public/images'
+import { logo } from '@/public/images'
 import Image from 'next/image'
 import Link from 'next/link'
 import { footer_nav } from './../../data'
 import './style.scss'
 import whiteDot from '@/public/2312/whiteDot.png'
+import yellowDot from '@/public/2312/dot_image.png'
 
 export default function Footer() {
   return (
@@ -34,7 +35,7 @@ export default function Footer() {
                       return (
                         <li key={index} className='flex items-center gap-2.5'>
                           <Image
-                            src={dot.src}
+                            src={yellowDot}
                             width={32}
                             height={32}
                             alt=''

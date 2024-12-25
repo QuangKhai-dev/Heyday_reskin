@@ -10,6 +10,7 @@ import dotUnactive from '@/public/images/dot_carousel.png'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import Image from 'next/image'
 
 const ReactSwiperNewUpdates = () => {
   const swiperRef = useRef<SwiperClass>()
@@ -93,7 +94,13 @@ const ReactSwiperNewUpdates = () => {
           }}
           className='cursor-pointer'
         >
-          <img className='dot-unActive rotate-180' src={arrowNext.src} />
+          <Image
+            width={56}
+            height={79}
+            alt=''
+            className='dot-unActive rotate-180'
+            src={arrowNext.src}
+          />
         </button>
         <button
           onClick={() => {
@@ -101,7 +108,13 @@ const ReactSwiperNewUpdates = () => {
           }}
           className='cursor-pointer'
         >
-          <img className='dot-unActive' src={arrowNext.src} />
+          <Image
+            width={56}
+            height={79}
+            alt=''
+            className='dot-unActive'
+            src={arrowNext.src}
+          />
         </button>
       </div>
     </>
