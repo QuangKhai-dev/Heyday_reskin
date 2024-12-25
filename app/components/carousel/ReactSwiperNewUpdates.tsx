@@ -17,16 +17,16 @@ const ReactSwiperNewUpdates = () => {
   return (
     <>
       <Swiper
-        slidesPerView={1.2}
+        slidesPerView={3}
         spaceBetween={8}
         onBeforeInit={swiper => {
           swiperRef.current = swiper
         }}
         loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false
+        // }}
         pagination={{
           clickable: true,
           // custom pagination
@@ -58,7 +58,6 @@ const ReactSwiperNewUpdates = () => {
                 date={data.date}
                 key={index}
                 id_story={data.id}
-                width={570}
                 title={data.title}
                 subtitle={data.subtitle}
                 Img={data.url}

@@ -7,7 +7,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @include section-title;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
 
     &::after {
       position: absolute;
@@ -27,7 +27,60 @@
     @include display-tile;
   }
 
+  h4 {
+    @include card-title;
+    background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   p {
     color: white;
+  }
+
+  .game-fi-box {
+    padding: 10px;
+
+    .topLeft-icon {
+      top: 5px;
+      left: 4px;
+    }
+
+    .topRight-icon {
+      top: 5px;
+      right: 4px;
+    }
+
+    .bottomLeft-icon {
+      bottom: 5px;
+      left: 4px;
+    }
+
+    .bottomRight-icon {
+      bottom: 5px;
+      right: 4px;
+    }
+
+    .game-fi-box-wrapper {
+      border: 1px solid #DFAD69
+    }
+
+    h6 {
+      @include card-title;
+      background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 10px;
+    }
+
+    .animation-readmore {
+      span {
+        @include card-title;
+        background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 16px;
+      }
+    }
   }
 }
