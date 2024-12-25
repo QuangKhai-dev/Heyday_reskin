@@ -13,15 +13,16 @@ import NewsUpdate from './feature/NewsUpdate/NewsUpdate'
 export default function Page() {
   return (
     <>
-      <Header />
-      <Banner />
       <IconDefs />
+      {/* <Header />
+      <Banner />
+      
       <GameFiM />
       <MysticalStone />
       <AuctionHouse />
       <Gameplay />
       <NewsUpdate />
-      <GameXStudio />
+      <GameXStudio /> */}
       <Footer />
     </>
   )

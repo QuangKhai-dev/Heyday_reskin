@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
           {/*ITEM LIST */}
-          <div className='footer-text flex flex-1 justify-evenly'>
+          <div className='footer-text flex flex-1 justify-evenly gap-5'>
             {footer_nav.map((content, index) => {
               return (
                 <div key={index} className='footer-text-item text-nowrap'>
