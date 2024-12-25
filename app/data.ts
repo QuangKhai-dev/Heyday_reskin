@@ -246,7 +246,7 @@ const footer_nav = [
     ]
   },
   {
-    name: 'available soon',
+    name: 'download now',
     list: [
       { name: 'android', path: '' },
       { name: 'IOS', path: '' },

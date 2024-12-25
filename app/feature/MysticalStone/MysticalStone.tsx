@@ -8,7 +8,7 @@ export default function MysticalStone() {
         <div className='title'>
           <h2 className='lineskin'>Mystical Stone</h2>
         </div>
-        <div className='content flex items-center'>
+        <div className='content relative z-10 flex items-center'>
           <p>{masticalStone.phaseGraph}</p>
           <div className='highlight-wrapper relative p-5'>
             <Image

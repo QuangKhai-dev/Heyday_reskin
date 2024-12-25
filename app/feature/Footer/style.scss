@@ -37,6 +37,26 @@
       @include common-title;
     }
   }
+
+  .footer-text-item {
+    ul {
+      li {
+        .dot-white {
+          display: none;
+        }
+
+        &:hover {
+          .dot-white {
+            display: block;
+          }
+
+          .dot-yellow {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1440px) {

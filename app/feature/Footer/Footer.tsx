@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { footer_nav } from './../../data'
 import './style.scss'
+import whiteDot from '@/public/2312/whiteDot.png'
 
 export default function Footer() {
   return (
@@ -32,7 +33,20 @@ export default function Footer() {
                     {content.list.map((item, index) => {
                       return (
                         <li key={index} className='flex items-center gap-2.5'>
-                          <Image src={dot.src} width={32} height={32} alt='' />
+                          <Image
+                            src={dot.src}
+                            width={32}
+                            height={32}
+                            alt=''
+                            className='dot-yellow'
+                          />
+                          <Image
+                            src={whiteDot}
+                            width={32}
+                            height={32}
+                            alt=''
+                            className='dot-white'
+                          />
                           <span className='cursor-pointer capitalize leading-loose text-beige-50'>
                             {item.path !== '' ? (
                               <Link href={`${item.path}`}>{item.name}</Link>

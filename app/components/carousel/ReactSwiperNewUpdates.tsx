@@ -54,6 +54,10 @@ const ReactSwiperNewUpdates = () => {
             spaceBetween: 40
           },
           1440: {
+            slidesPerView: 2.5,
+            spaceBetween: 40
+          },
+          1640: {
             slidesPerView: 3,
             spaceBetween: 40
           }

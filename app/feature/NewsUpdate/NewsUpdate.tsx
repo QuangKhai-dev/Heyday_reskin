@@ -25,11 +25,17 @@ export default function NewsUpdate() {
               <div className='main-news-item-footer mt-2 flex justify-between'>
                 <p className='date'>{contents[0].date}</p>
                 <Link
-                  className='animation-readmore flex items-center'
+                  className='animation-readmore-title flex items-center'
                   href={`news-update/${contents[0].id}`}
                 >
-                  <Icons.svgReadMore />
-                  <span>Read more</span>
+                  <div className='animation'>
+                    <Icons.svgReadMore />
+                    <span>Read more</span>
+                  </div>
+                  <div className='invisible flex items-center opacity-0'>
+                    <Icons.svgReadMore />
+                    <span>Read more</span>
+                  </div>
                 </Link>
               </div>
             </div>

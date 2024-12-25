@@ -19,13 +19,67 @@
     color: white;
   }
 
+  .animation-readmore-title {
+    display: inline-block;
+
+    position: relative;
+
+    .animation {
+      svg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.5s;
+      }
+
+      span {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: max-content;
+        transition: all 0.5s;
+      }
+    }
+
+    span {
+      @include card-title;
+      background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    &:hover {
+      .animation {
+        svg {
+          left: 77%;
+        }
+
+        span {
+          left: 0;
+        }
+      }
+    }
+  }
+
   .game-fi-box {
+    background: black;
     padding: 10px;
 
     &:hover {
+      h4 {
+        background-image: unset;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        color: white;
+      }
+
       .animation-readmore {
         svg {
-          left: 25%;
+          left: 27%;
         }
 
         span {
@@ -85,7 +139,7 @@
         -webkit-text-fill-color: transparent;
         font-size: 16px;
         transition: all 0.5s;
-        left: 15%;
+        left: 16%;
       }
     }
 
@@ -109,6 +163,17 @@
   .main-news {
     position: relative;
 
+    .main-news-item {
+      &:hover {
+        h3 {
+          background-image: unset;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: unset;
+          color: white;
+        }
+      }
+
+    }
 
     .leftSide {
       width: 60%;
@@ -203,6 +268,30 @@
       display: inline-block !important;
       background-color: unset !important;
       opacity: 1 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #community {
+    .game-fi-box {
+      .animation-readmore {
+        span {
+          left: 20%;
+        }
+      }
+
+      &:hover {
+        .animation-readmore {
+          span {
+            left: 12% !important;
+          }
+
+          svg {
+            left: 35%;
+          }
+        }
+      }
     }
   }
 }
