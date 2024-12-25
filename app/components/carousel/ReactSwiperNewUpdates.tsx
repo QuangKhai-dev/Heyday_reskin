@@ -4,7 +4,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import NewUpdatesBox from '@/app/components/frames/NewUpdatesBox'
 import { newUpdate } from '@/app/data'
-import arrowNext from '@/public/images/arrow_next.png'
+import arrowNext from '@/public/2312/arrowNextUpdate.png'
 import dotActiveCarousel from '@/public/images/dot_active_carousel.png'
 import dotUnactive from '@/public/images/dot_carousel.png'
 import 'swiper/css'
@@ -38,7 +38,7 @@ const ReactSwiperNewUpdates = () => {
           }
         }}
         modules={[Pagination, Navigation, Autoplay]}
-        className='mySwiper'
+        className='swiper-update'
         // responsive slide
         breakpoints={{
           768: {
@@ -68,7 +68,13 @@ const ReactSwiperNewUpdates = () => {
       </Swiper>
 
       {/* button click slide */}
-      <div className='arrows-swiper relative -bottom-10 mt-2 space-x-5 text-right'>
+      <div
+        className='arrows-swiper relative -bottom-10 mt-2 space-x-5 text-right'
+        style={{
+          marginTop: '-7%',
+          zIndex: 5
+        }}
+      >
         <button
           onClick={() => {
             swiperRef.current?.slidePrev()

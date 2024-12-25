@@ -52,16 +52,14 @@ export default function NewUpdatesBox({
           <div className='z-10 ml-10 flex w-[60%] flex-col gap-3 pt-4'>
             <h6 className='font-beaufortLoL text-[#D0B285]'>{date}</h6>
 
-            <h4 className={cn('uppercase group-hover:text-white')}>{title}</h4>
+            <h4 className={cn('line-clamp-2 uppercase group-hover:text-white')}>
+              {title}
+            </h4>
 
             <div className='content opacity-65'>
               <p className='line-clamp-2 duration-300 group-hover:text-[#fff]'>
                 {subtitle}
               </p>
-              <div className='animation-readmore mt-5 flex items-center'>
-                <Icons.svgReadMore />
-                <span>Read more</span>
-              </div>
             </div>
           </div>
 
@@ -70,6 +68,10 @@ export default function NewUpdatesBox({
               <Img />
             </div>
           </div>
+        </div>
+        <div className='animation-readmore mt-5 flex items-center'>
+          <Icons.svgReadMore />
+          <span>Read more</span>
         </div>
       </div>
     </div>

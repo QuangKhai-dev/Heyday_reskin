@@ -11,7 +11,7 @@ export default function NewsUpdate() {
     <section id='community' className='pb-16 pt-40'>
       <div className='container-1640 z-10'>
         {/* Main News */}
-        <div className='main-news'>
+        <div className='main-news mb-12'>
           <div className='leftSide'>
             <h2 className='lineskin'>news & updates</h2>
             <div className='main-news-item'>
