@@ -150,19 +150,22 @@
 
 @media screen and (max-width: 576px) {
   #mysticalStone {
+    padding-top: 90px;
+
     .content {
       p {
+        width: 100%;
         padding-right: 0;
         font-size: 12px;
       }
     }
 
     .highlight-wrapper {
-      transform: scale(0.5);
+      transform: scale(0.45);
       margin-top: -70px;
 
       ul {
-        font-size: 20px;
+        font-size: 24px;
       }
     }
 

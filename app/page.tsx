@@ -16,14 +16,10 @@ export default function Page() {
       <IconDefs />
       <Header />
       <Banner />
-
       <GameFiM />
-
-      <AuctionHouse />
-
-      <NewsUpdate />
       <MysticalStone />
-
+      <AuctionHouse />
+      <NewsUpdate />
       <Gameplay />
       <GameXStudio />
       <Footer />
