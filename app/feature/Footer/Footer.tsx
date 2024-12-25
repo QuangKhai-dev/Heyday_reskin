@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className='relative w-full scroll-mt-36 pb-24 pt-6' id='footer'>
       <div className='line-footer'></div>
-      <div className='container-1920'>
+      <div className='container-1640'>
         <div className='footer-content flex justify-between'>
           {/* {/ ICON + MEDIA LIST /} */}
           <div className='footer-title'>

@@ -1,6 +1,7 @@
 @import './../../mixin.scss';
 
 #footer {
+
   .line-footer {
     position: absolute;
     width: 1640px;
@@ -8,6 +9,8 @@
     background-color: #DFAD69;
     border-radius: 8px;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .footer-text {
