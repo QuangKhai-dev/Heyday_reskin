@@ -14,16 +14,16 @@ export default function Page() {
   return (
     <>
       <IconDefs />
-      {/* <Banner /> */}
+      <Header />
+      <Banner />
 
-      {/* <Header />
       <GameFiM />
-      
+
       <AuctionHouse />
-      
+
       <NewsUpdate />
- */}
       <MysticalStone />
+
       <Gameplay />
       <GameXStudio />
       <Footer />
