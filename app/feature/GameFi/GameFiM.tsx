@@ -36,12 +36,12 @@ export default function GameFiM() {
     <section id='gameFiM' className='scroll-mt-36 pt-11'>
       <div className='container-1640 relative z-10 pt-28'>
         <div className='relative'>
-          <div className='relative z-10 w-1/2'>
+          <div className='group-content relative z-10 w-1/2'>
             <h2 className='lineskin'>gamefi mechanism</h2>
             <h3 className='titleFont mt-4 font-light text-white lg:mt-5'>
               {text.name}
             </h3>
-            <p className='mt-4 max-w-[36.875rem] font-light text-white lg:mt-5'>
+            <p className='content mt-4 font-light text-white lg:mt-5'>
               {text.desc}
             </p>
           </div>
@@ -55,8 +55,8 @@ export default function GameFiM() {
         </div>
 
         <Swiper
-          slidesPerView={2.5}
-          spaceBetween={14}
+          slidesPerView={4}
+          spaceBetween={10}
           onBeforeInit={swiper => {
             swiperRef.current = swiper
           }}
@@ -69,8 +69,7 @@ export default function GameFiM() {
           className='mySwiper'
           breakpoints={{
             768: {
-              slidesPerView: 4,
-              spaceBetween: 40
+              spaceBetween: 30
             },
             1024: {
               slidesPerView: 6,
