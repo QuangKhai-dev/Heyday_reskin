@@ -7,7 +7,7 @@ export default function Gameplay() {
   return (
     <section
       id='gameplay'
-      className='relative flex scroll-mt-60 items-center pt-40 duration-300'
+      className='relative flex items-center pt-40 duration-300'
     >
       <div className='container-1640'>
         <div className='title'>

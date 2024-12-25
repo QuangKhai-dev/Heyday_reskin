@@ -7,10 +7,8 @@ export default function GameXStudio() {
     <section id='support' className='pt-160 pb-68'>
       <div className='container-1640'>
         <div data-aos='fade-up'>
-          <h2 className='section-title mb-4 text-center'>gamexstudio</h2>
-          <div className='flex justify-center'>
-            <LineReskin />
-          </div>
+          <h2 className='lineskin items-center'>gamexstudio</h2>
+
           <p className='content mx-auto mt-10 max-w-[1130px] text-center text-white opacity-65'>
             Born from the fusion of Been Boom Labs&apos; explosive innovation
             and EBIZWORLD&apos;s storytelling mastery, GameXStudio is where bold

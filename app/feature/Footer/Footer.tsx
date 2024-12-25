@@ -8,7 +8,7 @@ import './style.scss'
 
 export default function Footer() {
   return (
-    <footer className='relative w-full scroll-mt-36 pb-24 pt-6' id='footer'>
+    <footer className='relative w-full pb-24 pt-6' id='footer'>
       <div className='line-footer'></div>
       <div className='container-1640'>
         <div className='footer-content relative z-10 flex justify-between'>

@@ -33,7 +33,7 @@ export default function GameFiM() {
   const swiperRef = useRef<SwiperClass>()
 
   return (
-    <section id='gameFiM' className='scroll-mt-36 pt-11'>
+    <section id='gameFiM' className='pt-11'>
       <div className='container-1640 relative z-10 pt-28'>
         <div className='relative'>
           <div className='group-content relative z-10 w-1/2'>

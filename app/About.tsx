@@ -12,7 +12,7 @@ export default function HeyDay_ROE() {
         backgroundImage: `url(${backgroundAbout.src})`,
         backgroundSize: 'cover'
       }}
-      className='relative mt-40 scroll-mt-36'
+      className='relative mt-40'
     >
       <Image
         src={shadowLeftRight.src}

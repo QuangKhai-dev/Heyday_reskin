@@ -2,20 +2,6 @@
   #support {
     @apply px-8;
 
-    .section-title {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    img[alt="line"] {
-      width: 100px;
-    }
-
-    .content {
-      font-size: 16px;
-      margin-top: 20px;
-    }
-
     .logos img {
       width: 20%;
       height: auto;
@@ -34,26 +20,10 @@
   #support {
     @apply px-8;
 
-    .section-title {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    img[alt="line"] {
-      width: 75px;
-    }
-
-    .content {
-      font-size: 10px;
-      margin-top: 20px;
-    }
-
     .logos img {
       width: 20%;
       height: auto;
       object-fit: contain;
     }
-
-
   }
 }
