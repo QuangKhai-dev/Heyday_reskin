@@ -62,7 +62,14 @@
     }
 
     .game-fi-box-wrapper {
-      border: 1px solid #DFAD69
+      border: 1px solid #DFAD69;
+
+      .content {
+        p {
+          font-size: 12px;
+          transition: all 0.5s;
+        }
+      }
     }
 
     h6 {
@@ -80,6 +87,14 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 16px;
+      }
+    }
+
+    &:hover {
+      .content {
+        p {
+          font-size: 20px;
+        }
       }
     }
   }

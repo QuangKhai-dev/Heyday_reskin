@@ -54,19 +54,19 @@ export default function NewUpdatesBox({
 
             <h4 className={cn('uppercase group-hover:text-white')}>{title}</h4>
 
-            <div className='content max-w-[350px] font-gothic leading-[1.375rem] opacity-65'>
-              <p className='line-clamp-2 text-[12px] duration-300 group-hover:text-[16px] group-hover:text-[#fff]'>
+            <div className='content opacity-65'>
+              <p className='line-clamp-2 duration-300 group-hover:text-[#fff]'>
                 {subtitle}
               </p>
-              {/* <div className='animation-readmore mt-5'>
+              <div className='animation-readmore mt-5 flex items-center'>
                 <Icons.svgReadMore />
                 <span>Read more</span>
-              </div> */}
+              </div>
             </div>
           </div>
 
           <div className='absolute z-[-2] w-[40%]'>
-            <div className='view-bg absolute left-[12rem] h-full w-[300px] translate-x-24 bg-cover bg-no-repeat duration-[1500ms] group-hover:translate-x-[25%] md:translate-x-20 md:group-hover:translate-x-3'>
+            <div className='view-bg absolute left-[12rem] h-full w-[300px] translate-x-24 bg-cover bg-no-repeat duration-[1500ms] md:translate-x-20'>
               <Img />
             </div>
           </div>

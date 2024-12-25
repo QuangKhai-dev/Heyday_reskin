@@ -23,21 +23,7 @@ export default function NewsUpdate() {
                   {contents[0].subtitle}
                 </p>
               </div>
-
-              <div className='flex w-[70%] justify-between'>
-                {/* <h6 className='mb-3 mt-6 text-[12px] tracking-widest text-beige-50'>
-                  {contents[0].date}
-                </h6> */}
-
-                {/* <div className='new-update-box w-32 cursor-pointer'>
-                  <div className='animation-readmore mt-5'>
-                    <Icons.svgReadMore />
-                    <span className='text-title-newUpdates font-bold'>
-                      Read more
-                    </span>
-                  </div>
-                </div> */}
-              </div>
+              <div className='flex w-[70%] justify-between'></div>
             </div>
             <Image
               className='absolute right-0 top-1/2 -translate-y-1/2'
