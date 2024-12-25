@@ -45,13 +45,8 @@ const GamePlayItem = ({ title, content }: IProps) => {
         onClick={() => setHeight(height === 0 ? 'auto' : 0)}
       >
         <h3>{title}</h3>
-        <div>
-          <Image
-            alt='icon gameplay'
-            width={45}
-            height={45}
-            src='/2312/icon_gameplay.png'
-          />
+        <div className='angle-icon'>
+          <Image fill alt='icon gameplay' src='/2312/icon_gameplay.png' />
         </div>
       </div>
       <AnimateHeight
