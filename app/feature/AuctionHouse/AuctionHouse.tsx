@@ -6,11 +6,13 @@ export default function AuctionHouse() {
     <section id='auctionHouse' className='pt-40'>
       <div className='container-1640'>
         <div className='title'>
-          <h2 className='lineskin'>Auction House</h2>
+          <h2 className='lineskin' data-aos='fade-up'>
+            Auction House
+          </h2>
         </div>
         <div className='content flex items-center'>
-          <p>{auctionHouse.phaseGraph}</p>
-          <div className='highlight-wrapper relative p-5'>
+          <p data-aos='fade-right'>{auctionHouse.phaseGraph}</p>
+          <div className='highlight-wrapper relative p-5' data-aos='fade-left'>
             <Image
               src='/2312/highlight_wrapper.png'
               alt='highlight-wrapper'
@@ -28,7 +30,10 @@ export default function AuctionHouse() {
           </div>
         </div>
       </div>
-      <div className='image-main ml-auto mr-auto max-w-[1920px]'>
+      <div
+        className='image-main ml-auto mr-auto max-w-[1920px]'
+        data-aos='fade-up'
+      >
         <Image
           src='/2312/auction-house.png'
           alt='auction-house'

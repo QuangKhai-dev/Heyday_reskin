@@ -8,6 +8,7 @@ export default function Gameplay() {
     <section
       id='gameplay'
       className='relative flex items-center pt-40 duration-300'
+      data-aos='fade-up'
     >
       <div className='container-1640'>
         <div className='title'>

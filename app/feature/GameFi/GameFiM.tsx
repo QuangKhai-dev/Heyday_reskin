@@ -35,7 +35,7 @@ export default function GameFiM() {
   return (
     <section id='gameFiM' className='pt-11'>
       <div className='container-1640 relative z-10 pt-28'>
-        <div className='relative'>
+        <div className='relative' data-aos='fade-up'>
           <div className='group-content relative z-10 w-1/2'>
             <h2 className='lineskin'>gamefi mechanism</h2>
             <h3 className='titleFont mt-4 font-light text-white lg:mt-5'>
@@ -80,6 +80,7 @@ export default function GameFiM() {
           {gamefiMe.stories.map((el, id) => {
             return (
               <SwiperSlide
+                data-aos='fade-up'
                 className='gamefiMe-item cursor-pointer'
                 key={id}
                 onClick={() =>
