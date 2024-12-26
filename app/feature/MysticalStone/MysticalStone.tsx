@@ -6,11 +6,13 @@ export default function MysticalStone() {
     <section id='mysticalStone' className='pt-40'>
       <div className='container-1640'>
         <div className='title'>
-          <h2 className='lineskin'>Mystical Stone</h2>
+          <h2 className='lineskin' data-aos='fade-up'>
+            Mystical Stone
+          </h2>
         </div>
         <div className='content relative z-10 flex items-center'>
-          <p>{masticalStone.phaseGraph}</p>
-          <div className='highlight-wrapper relative p-5'>
+          <p data-aos='fade-right'>{masticalStone.phaseGraph}</p>
+          <div className='highlight-wrapper relative p-5' data-aos='fade-left'>
             <Image
               src='/2312/highlight_wrapper.png'
               alt='highlight-wrapper'
@@ -27,7 +29,7 @@ export default function MysticalStone() {
             </ul>
           </div>
         </div>
-        <div className='relative'>
+        <div className='relative' data-aos='fade-up'>
           <Image
             width={1920}
             height={500}

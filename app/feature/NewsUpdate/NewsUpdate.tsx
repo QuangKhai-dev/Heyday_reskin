@@ -11,8 +11,10 @@ export default function NewsUpdate() {
     <section id='community' className='pt-40'>
       <div className='container-1640 z-10'>
         {/* Main News */}
-        <h2 className='lineskin title-mobile'>news & updates</h2>
-        <div className='main-news mb-12'>
+        <h2 className='lineskin title-mobile' data-aos='fade-up'>
+          news & updates
+        </h2>
+        <div className='main-news mb-12' data-aos='fade-up'>
           <div className='leftSide'>
             <h2 className='lineskin'>news & updates</h2>
             <div className='main-news-item'>
@@ -44,7 +46,7 @@ export default function NewsUpdate() {
             <Image src={IMG.src} alt='' width={954.05} height={508} />
           </div>
         </div>
-        <div className='wrraper-slider'>
+        <div className='wrraper-slider' data-aos='fade-up'>
           {/* Slider */}
           <ReactSwiperNewUpdates />
         </div>
