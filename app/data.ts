@@ -169,19 +169,12 @@ const gamefiMe = {
 
 const newUpdate = [
   {
-    id: 1,
-    title: 'Heyday: Rise of Empires – The Game’s Uniqueness',
-    date: 'October 1, 2024',
-    subtitle: `Step into a world where strategy, power, and ancient mysteries collide. Heyday: Rise of Empires isn’t just another empire-building game; it’s an expansive, blockchain-integrated experience that blends deep tactical combat, dynamic factional politics, and the thrill of discovery. With unique features like the Mystical Stone System, the Path of Ascendancy, and full ownership of in-game assets through NFTs, Heyday sets itself apart from anything you’ve played before. Whether you're leading one of the powerful factions to dominance, unlocking rare relics, or trading valuable assets, every decision you make will shape the future of the fractured world of Covenant. Ready to carve your path and rise to the top? Here’s why Heyday: Rise of Empires is a game like no other.`,
-    url: Item1
-  },
-  {
     id: 2,
     title: 'The Story of Heyday: Rises of Empires',
     date: 'October 1, 2024',
     subtitle:
       'In the land of Aetheris, nestled among realms both ancient and fractured, lies the continent of Covenant—a place once known for its grand civilizations, breathtaking advances in both magic and technology, and the thriving culture of the Old Empire. But now, this mighty land is nothing more than a patchwork of broken kingdoms, haunted by echoes of its former glory and the catastrophic event known as the Great Sundering. It was here, in the heart of Covenant, where the fate of the world shifted forever.',
-    url: Item2
+    url: Item1
   },
   {
     id: 3,
@@ -189,7 +182,7 @@ const newUpdate = [
     date: 'October 1, 2024',
     subtitle:
       "Step into a world where strategy, power, and ancient mysteries collide. Heyday: Rise of Empires isn’t just another empire-building game; it’s an expansive, blockchain-integrated experience that blends deep tactical combat, dynamic factional politics, and the thrill of discovery. With unique features like the Mystical Stone System, the Path of Ascendancy, and full ownership of in-game assets through NFTs, Heyday sets itself apart from anything you’ve played before. Whether you're leading one of the powerful factions to dominance, unlocking rare relics, or trading valuable assets, every decision you make will shape the future of the fractured world of Covenant. Ready to carve your path and rise to the top? Here’s why Heyday: Rise of Empires is a game like no other.",
-    url: Item3
+    url: Item2
   },
   {
     id: 4,
@@ -198,7 +191,7 @@ const newUpdate = [
     date: 'October 1, 2024',
     subtitle:
       "Heyday: Rise of Empires offers a deep, immersive strategy experience, providing a wide range of diverse game modes to cater to different playstyles and preferences. Whether you're focused on tactical combat, resource management, exploration, or earning rewards through blockchain-based systems, the game has something for everyone. From large-scale faction wars to personal hero progression and limited-time events, Heyday delivers an engaging world where every decision counts.",
-    url: Item4
+    url: Item3
   },
   {
     id: 5,

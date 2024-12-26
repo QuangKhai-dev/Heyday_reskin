@@ -1,6 +1,5 @@
 import React from 'react'
 import './style.scss'
-import LineReskin from '@/app/components/structures/LineReskin'
 import { GameXStudioBox } from '@/app/components/frames'
 export default function GameXStudio() {
   return (
