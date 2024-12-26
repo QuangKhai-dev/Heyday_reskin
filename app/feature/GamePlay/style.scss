@@ -1,0 +1,209 @@
+@import './../../mixin';
+
+#gameplay {
+  .gameplay-item {
+    border: 1px solid #dfad69;
+    padding: 25px 30px 25px 30px;
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+
+    .animate-title {
+      @include common-title;
+      background-image: linear-gradient(90deg, #feffbc 0%, #ffc671 153.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      .angle-icon {
+        width: 45px;
+        height: 45px;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 39.25px;
+          height: 39.25px;
+          background: #ffffff;
+          filter: blur(30px);
+          transition: all 0.3s;
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-block;
+          z-index: 9;
+          opacity: 0;
+        }
+      }
+
+      .angle-icon-rotate {
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        background-image: unset;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        // background-color: white;
+        color: white;
+
+        .angle-icon::after {
+          opacity: 1;
+        }
+
+
+
+      }
+    }
+
+    .desc {
+      font-size: 1.25rem;
+    }
+
+    li {
+      @apply pt-5;
+      list-style-position: inside !important;
+      list-style: disc;
+      text-transform: capitalize;
+    }
+  }
+
+  .swiperGamePlay {
+    display: none;
+  }
+}
+
+@media screen and (max-width : 1440px) {
+  #gameplay {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #gameplay {
+    .content-desktop {
+      display: none;
+    }
+
+    .swiperGamePlay {
+      display: block;
+      overflow: visible;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+
+      h2 {
+        &::after {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -40px;
+          width: 130px;
+          background-repeat: no-repeat;
+          height: 30px;
+          background-size: contain;
+        }
+      }
+    }
+
+    .gameplay-item {
+      .animate-title {
+        font-size: 24px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width:1024px) {
+  #gameplay {
+
+    .title {
+      text-align: center;
+
+      h2 {
+        &::after {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    .gameplay-item {
+      .desc {
+        font-size: 12px;
+      }
+    }
+
+
+
+    .swiper-pagination {
+      text-align: center;
+    }
+
+    .swiperGamePlay .swiper-pagination {
+      bottom: -50px;
+    }
+
+    .dot-active,
+    .swiperGamePlay .dot-active,
+    .swiper-newupdate .dot-active {
+      display: none;
+    }
+
+    .swiper-pagination-bullet-active .dot-active,
+    .swiperGamePlay .swiper-pagination-bullet-active .dot-active,
+    .swiper-newupdate .swiper-pagination-bullet-active .dot-active {
+      display: inline-block;
+    }
+
+    .swiper-pagination-bullet-active .dot-unActive,
+    .swiperGamePlay .swiper-pagination-bullet-active .dot-unActive,
+    .swiper-newupdate .swiper-pagination-bullet-active .dot-unActive {
+      display: none;
+    }
+
+    .dot-carousel-gamefim {
+      width: 13px !important;
+      height: 13px !important;
+      display: inline-block !important;
+      background-color: unset !important;
+      opacity: 1 !important;
+    }
+
+    // display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #gameplay {
+    padding-top: 100px;
+
+    h3 {
+      font-size: 12px !important;
+    }
+
+    .gameplay-item {
+      .angle-icon {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      .desc {
+        padding-top: 20px;
+        font-size: 10px;
+      }
+
+    }
+
+    .swiperGamePlay {
+      padding-bottom: 30px;
+    }
+  }
+
+}

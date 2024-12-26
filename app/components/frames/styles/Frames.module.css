@@ -1,0 +1,15 @@
+.borderGradient {
+  border: 1px solid;
+  border-image: linear-gradient(90deg, #dfad69 0%, #dfad69 153.8%) 1;
+}
+
+.borderGradient_2 {
+  border: 1px solid;
+  border-image: linear-gradient(
+      90deg,
+      #fdffa0 0%,
+      rgba(253, 255, 160, 0) 50%,
+      #fdffa0 100%
+    )
+    1;
+}

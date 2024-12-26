@@ -1,0 +1,290 @@
+.section-banner {
+  width: 100%;
+  position: relative;
+
+  .container-1920 {
+    background-size: cover;
+    height: auto;
+    aspect-ratio: 16/9;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      background-image: url('/2312/bg-banner-1.png');
+      background-size: cover;
+      -webkit-mask-image: url('/2312/mask.png');
+      mask-image: url('/2312/mask.png');
+      mask-size: cover;
+      -webkit-mask-composite: destination-over;
+      mask-composite: destination-over;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      background: url('/2312/animation-bg.gif');
+      background-size: cover;
+      -webkit-mask-image: url('/2312/mask.png');
+      mask-image: url('/2312/mask.png');
+      mask-size: cover;
+      -webkit-mask-composite: destination-over;
+      mask-composite: destination-over;
+    }
+    .content-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      padding-bottom: 5rem;
+    }
+    .logo-text {
+      width: 36vw;
+      max-width: 690px;
+      object-fit: contain;
+      margin-bottom: 5rem;
+    }
+    h1 {
+      width: 100%;
+      max-width: 1450px;
+      aspect-ratio: calc(1451.71 / 182.37);
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      position: relative;
+      z-index: auto;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -42px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 171%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-image: url('/2312/light.png');
+        background-size: cover;
+        z-index: 5;
+        aspect-ratio: 1451.71 / 182.37;
+      }
+      &::after {
+        content: 'RISE & CONQUER';
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(90deg, #000 0%, #483705 45%, #000 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: max-content;
+      }
+    }
+  }
+  .list-apps {
+    display: flex;
+    gap: 0.5rem;
+
+    .app-item {
+      padding: 0.625rem 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      .icon {
+        position: relative;
+        z-index: 20;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #fff;
+          z-index: -1;
+          filter: blur(25px);
+        }
+        svg {
+          width: 3.5rem;
+          height: auto;
+          aspect-ratio: 1/1;
+        }
+      }
+      .icon-name {
+        text-transform: uppercase;
+        font-family: 'Cinzel', serif;
+        font-size: 1rem;
+        line-height: 1.125;
+        line-height: 1.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .div-translateY {
+    transform: translateY(-5rem);
+  }
+  .social {
+    left: 140px;
+    .mediaList {
+      width: 130.45px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  .section-banner {
+    .container-1920 {
+      .logo-text {
+        width: 30vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .section-banner {
+    .container-1920 {
+      &::before,
+      &::after {
+        width: 110%;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+      .content-wrapper {
+        padding-bottom: 0;
+      }
+      h1 {
+        font-size: 3rem;
+        &::before {
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .list-apps {
+      .app-item {
+        .icon {
+          svg {
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .section-banner {
+    .div-translateY {
+      transform: translateY(0);
+    }
+    .container-1920 {
+      &::before,
+      &::after {
+        width: 120%;
+      }
+      .logo-text {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .section-banner {
+    .container-1920 {
+      .logo-text {
+        width: 41vw;
+        max-width: unset;
+        margin-bottom: -4rem;
+      }
+      h1 {
+        margin-bottom: -1.5rem;
+      }
+      &::before,
+      &::after {
+        width: 140%;
+      }
+      .content-wrapper {
+        transform: translateY(3rem);
+      }
+    }
+    .social {
+      .mediaList {
+        svg {
+          width: 3.5rem;
+          height: auto;
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+    .div-translateY {
+      transform: translateY(3rem);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-banner {
+    .social {
+      .mediaList {
+        display: none;
+      }
+    }
+    .container-1920 {
+      &::before,
+      &::after {
+        width: 200%;
+      }
+      .content-wrapper {
+        transform: translateY(46%);
+      }
+      .logo-text {
+        width: 68vw;
+        margin-bottom: -3rem;
+      }
+      h1 {
+        margin-bottom: -0.5rem;
+        font-size: 6vw;
+      }
+    }
+    .list-apps {
+      gap: 4vw;
+      .app-item {
+        padding-right: 0;
+        padding-left: 0;
+        gap: 5px;
+        .icon {
+          svg {
+            width: 5vw;
+          }
+          &::before {
+            filter: blur(8px);
+          }
+        }
+        .icon-name {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
