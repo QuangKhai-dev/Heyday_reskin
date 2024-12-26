@@ -94,7 +94,7 @@ export default function Header() {
 
           {/* Sidebar */}
           <div
-            className={`fixed left-0 top-0 z-20 h-screen w-max max-w-[60%] transform bg-black p-6 pl-10 pr-4 text-white transition-transform duration-300 ease-in-out ${
+            className={`side-barr fixed left-0 top-0 z-20 h-screen w-max max-w-[60%] transform bg-black p-6 pl-10 pr-4 text-white transition-transform duration-300 ease-in-out ${
               isSidebarOpen ? 'translate-x-0' : 'translate-x-[-100%]'
             }`}
             onClick={closeSidebar}
