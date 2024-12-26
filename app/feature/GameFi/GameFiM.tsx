@@ -66,6 +66,7 @@ export default function GameFiM() {
             disableOnInteraction: false
           }}
           modules={[Autoplay]}
+          data-aos='fade-up'
           className='mySwiper'
           breakpoints={{
             768: {
@@ -80,7 +81,6 @@ export default function GameFiM() {
           {gamefiMe.stories.map((el, id) => {
             return (
               <SwiperSlide
-                data-aos='fade-up'
                 className='gamefiMe-item cursor-pointer'
                 key={id}
                 onClick={() =>

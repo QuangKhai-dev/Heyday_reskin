@@ -1,5 +1,4 @@
 import cn from '@/app/utils/cn'
-import Icons from '../icons/Icons'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -75,7 +74,7 @@ export default function NewUpdatesBox({
           </div>
         </div>
         <div className='animation-readmore mt-5 flex items-center'>
-          <Icons.svgReadMore />
+          <Image width={35} height={1} src='/2312/iconReadmore.png' alt='' />
           <span>Read more</span>
         </div>
       </div>

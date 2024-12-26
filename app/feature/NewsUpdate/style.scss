@@ -78,7 +78,7 @@
       }
 
       .animation-readmore {
-        svg {
+        img {
           left: 27%;
         }
 
@@ -221,7 +221,7 @@
       transition: all 0.5s ease-in-out;
     }
 
-    svg {
+    img {
       transition: all 0.5s ease-in-out;
       position: absolute;
       left: 50px;
@@ -285,6 +285,13 @@
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .swiper-update {
+    max-width: 1920px;
+    overflow: hidden !important;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   #community {
     .game-fi-box {
@@ -300,7 +307,7 @@
             left: 12% !important;
           }
 
-          svg {
+          img {
             left: 35%;
           }
         }

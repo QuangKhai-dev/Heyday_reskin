@@ -23,10 +23,10 @@ const ReactSwiperNewUpdates = () => {
           swiperRef.current = swiper
         }}
         loop={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false
+        }}
         pagination={{
           clickable: true,
           // custom pagination
