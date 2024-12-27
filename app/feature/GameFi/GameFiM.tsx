@@ -8,6 +8,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/effect-fade'
 
 interface StateType {
   id: number | string
@@ -26,9 +27,14 @@ const initialState: StateType = {
 export default function GameFiM() {
   const [text, setText] = useState(initialState)
   const [idActive, setIDActive] = useState(initialState.id)
+  const [fade, setFade] = useState(false)
   const handleChangeText = (obj: StateType) => {
-    setText(obj)
-    setIDActive(obj.id)
+    setFade(true) // Bắt đầu fade-out
+    setTimeout(() => {
+      setText(obj) // Cập nhật nội dung mới
+      setFade(false) // Bắt đầu fade-in
+      setIDActive(obj.id)
+    }, 400) // Thời gian fade-out (khớp với CSS transition)
   }
   const swiperRef = useRef<SwiperClass>()
 
@@ -46,7 +52,7 @@ export default function GameFiM() {
             </p>
           </div>
           <Image
-            className='gameFiBg absolute right-0'
+            className={`gameFiBg absolute right-0 ${fade ? 'fade-out' : 'fade-in'}`}
             src={text.img.src}
             alt=''
             width={1280}

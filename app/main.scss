@@ -8,6 +8,7 @@
 html {
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -121,7 +122,6 @@ h2.lineskin {
 }
 
 @media screen and (max-width: 768px) {
-
   .container-1920,
   .container-1640 {
     padding-right: 1rem;

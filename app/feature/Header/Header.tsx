@@ -36,7 +36,7 @@ export default function Header() {
       <Link
         href={item.path}
         key={item.name}
-        className={item.id == idActive ? 'menu active h-full' : 'menu h-full'}
+        className={item.id == idActive ? 'menu active' : 'menu'}
         onClick={() => {
           setIdActive(item.id)
         }}

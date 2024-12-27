@@ -141,3 +141,16 @@
     }
   }
 }
+
+.gameFiBg {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out; // Hiệu ứng mượt khi thay đổi opacity
+}
+
+.gameFiBg.fade-out {
+  opacity: 0; // Hình ảnh sẽ biến mất dần
+}
+
+.gameFiBg.fade-in {
+  opacity: 1; // Hình ảnh sẽ hiện dần
+}
