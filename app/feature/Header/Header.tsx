@@ -4,7 +4,7 @@ import logo from '@/public/2312/logo.png'
 import iconRight from '@/public/2312/icons/menu-arrow-right.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './style.scss'
 import ButtonHeader from './ButtonHeader'
 import { MediaList } from '@/app/components/structures'
@@ -15,12 +15,43 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false) // Menu state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false) // Sidebar state
   const [navs] = useState([
-    { name: 'about', path: '/#section-banner', id: 0 },
-    { name: 'game features', path: '/#gameplay', id: 1 },
-    { name: 'community', path: '/#community', id: 2 },
-    { name: 'support', path: '/#support', id: 3 }
+    {
+      name: 'about',
+      path: '/#section-banner',
+      id: 0,
+      sectionId: 'section-banner'
+    },
+    { name: 'game features', path: '/#gameplay', id: 1, sectionId: 'gameplay' },
+    { name: 'community', path: '/#community', id: 2, sectionId: 'community' },
+    { name: 'support', path: '/#support', id: 3, sectionId: 'support' }
   ])
+  useEffect(() => {
+    const observerOptions = {
+      root: null, // Theo dõi toàn bộ viewport
+      threshold: 0.5 // Ít nhất 50% phần tử phải xuất hiện trong viewport
+    }
 
+    const observerCallback = entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const nav = navs.find(nav => nav.sectionId === entry.target.id)
+          if (nav) setIdActive(nav.id)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    // Gắn observer cho từng section
+    navs.forEach(nav => {
+      const section = document.getElementById(nav.sectionId)
+      if (section) observer.observe(section)
+    })
+
+    return () => {
+      observer.disconnect() // Cleanup observer khi component unmount
+    }
+  }, [navs])
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
     setIsSidebarOpen(!isSidebarOpen)
@@ -37,9 +68,8 @@ export default function Header() {
         href={item.path}
         key={item.name}
         className={item.id == idActive ? 'menu active' : 'menu'}
-        onClick={() => {
-          setIdActive(item.id)
-        }}
+        onClick={() => setIdActive(item.id)}
+        scroll={true}
       >
         {item.id === idActive && (
           <Image
