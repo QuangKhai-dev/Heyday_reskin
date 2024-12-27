@@ -31,10 +31,17 @@ export default function Header() {
       threshold: 0.5 // Ít nhất 50% phần tử phải xuất hiện trong viewport
     }
 
-    const observerCallback = entries => {
+    interface Nav {
+      name: string
+      path: string
+      id: number
+      sectionId: string
+    }
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const nav = navs.find(nav => nav.sectionId === entry.target.id)
+          const nav = navs.find((nav: Nav) => nav.sectionId === entry.target.id)
           if (nav) setIdActive(nav.id)
         }
       })
