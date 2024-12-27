@@ -8,6 +8,26 @@
     @include display-tile;
     max-width: 41.875rem;
   }
+  #highlight-swiper {
+    width: calc((100% / 6) - 24px);
+    position: absolute;
+    height: 4px; /* Chiều cao của highlight */
+    background-color: #ffd700; /* Màu sắc của highlight */
+    transition: all 0.8s ease-in-out; /* Hiệu ứng mượt */
+    top: 0; /* Nằm phía dưới các item */
+    z-index: 10; /* Nằm trên các slide */
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 1;
+    aspect-ratio: 1;
+    height: 100%;
+  }
 }
 #gameFiM {
   margin-top: 8rem;
@@ -43,27 +63,6 @@
       width: 81%;
       height: auto;
       aspect-ratio: 1 / 1;
-      &.active {
-        &::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 114%;
-          height: auto;
-          border-radius: 50%;
-          background: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 1) 70%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          z-index: -1;
-          filter: blur(20px);
-          opacity: 1;
-          aspect-ratio: 1.1;
-        }
-      }
     }
   }
   .gameFiBg {
@@ -85,6 +84,11 @@
     .swiper {
       margin-top: 10rem;
     }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #highlight-swiper {
+    width: calc((100% / 6) - 30px);
   }
 }
 
@@ -123,6 +127,32 @@
 @media screen and (max-width: 768px) {
   #gameFiM {
     margin-top: 35vh;
+    #highlight-swiper {
+      display: none;
+    }
+    .gamefiMe-item .gamefiMe-item-image {
+      &.active {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 114%;
+          height: auto;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 1) 70%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          z-index: -1;
+          filter: blur(20px);
+          opacity: 1;
+          aspect-ratio: 1.1;
+        }
+      }
+    }
   }
 }
 

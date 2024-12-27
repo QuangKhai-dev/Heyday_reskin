@@ -1,6 +1,6 @@
 'use client'
 import Image, { StaticImageData } from 'next/image'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { gamefiMe } from '../../data'
 import gameFi1 from '@/app/components/icons/gameFi/gameFi1.png'
 import './style.scss'
@@ -28,14 +28,38 @@ export default function GameFiM() {
   const [text, setText] = useState(initialState)
   const [idActive, setIDActive] = useState(initialState.id)
   const [fade, setFade] = useState(false)
+
   const handleChangeText = (obj: StateType) => {
     setFade(true) // Bắt đầu fade-out
     setTimeout(() => {
       setText(obj) // Cập nhật nội dung mới
       setFade(false) // Bắt đầu fade-in
       setIDActive(obj.id)
-    }, 400) // Thời gian fade-out (khớp với CSS transition)
+    }, 400) // Thời gian fade-out
   }
+
+  useEffect(() => {
+    // Lấy element mới được active
+    const activeElement = document.querySelector(`.gamefiMe-item-image.active`)
+    if (activeElement) {
+      const activeElementParent = activeElement.parentElement
+      const swiperContainer = document.querySelector('.mySwiper')
+      if (activeElementParent && swiperContainer) {
+        const activeRect = activeElementParent.getBoundingClientRect()
+        const swiperRect = swiperContainer.getBoundingClientRect()
+
+        // Tính toán vị trí `left` tương đối với container
+        const leftPosition = activeRect.left - swiperRect.left
+
+        // Gắn vị trí cho highlight
+        const highlight = document.getElementById('highlight-swiper')
+        if (highlight) {
+          highlight.style.left = `${leftPosition}px`
+        }
+      }
+    }
+  }, [idActive])
+
   const swiperRef = useRef<SwiperClass>()
 
   return (
@@ -84,6 +108,12 @@ export default function GameFiM() {
             }
           }}
         >
+          {/* Highlight Element */}
+          <div
+            id='highlight-swiper'
+            className='bg-yellow-500 absolute h-[4px] transition-all duration-300 ease-in-out'
+            style={{ left: 0 }}
+          ></div>
           {gamefiMe.stories.map((el, id) => {
             return (
               <SwiperSlide
